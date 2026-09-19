@@ -41,6 +41,7 @@ import simplejson as json
 from anytree import AnyNode, LevelOrderIter
 import config
 import excelexporters.combinedequipmentbatch
+import docxexporters.combinedequipmentbatch
 from core.useractivity import access_control, api_key_control
 
 logger = logging.getLogger(__name__)
@@ -73,6 +74,8 @@ class Reporting:
         reporting_period_end_datetime_local = req.params.get('reportingperiodenddatetime')
         language = req.params.get('language')
         quick_mode = req.params.get('quickmode')
+        export_excel = req.params.get('exportexcel')
+        export_docx = req.params.get('exportdocx')
 
         ################################################################################################################
         # Step 1: valid parameters
@@ -132,6 +135,10 @@ class Reporting:
         cursor_system_db = None
         cnx_energy_db = None
         cursor_energy_db = None
+        cnx_billing_db = None
+        cursor_billing_db = None
+        cnx_carbon_db = None
+        cursor_carbon_db = None
         try:
             cnx_system_db = mysql.connector.connect(**config.myems_system_db)
             cursor_system_db = cnx_system_db.cursor()
@@ -151,6 +158,18 @@ class Reporting:
                     len(str.strip(quick_mode)) > 0 and \
                     str.lower(str.strip(quick_mode)) in ('true', 't', 'on', 'yes', 'y'):
                 is_quick_mode = True
+
+            is_export_excel = False
+            if export_excel is not None and \
+                    len(str.strip(export_excel)) > 0 and \
+                    str.lower(str.strip(export_excel)) in ('true', 't', 'on', 'yes', 'y'):
+                is_export_excel = True
+
+            is_export_docx = False
+            if export_docx is not None and \
+                    len(str.strip(export_docx)) > 0 and \
+                    str.lower(str.strip(export_docx)) in ('true', 't', 'on', 'yes', 'y'):
+                is_export_docx = True
 
             ############################################################################################################
             # Redis cache
@@ -185,6 +204,8 @@ class Reporting:
                         if reporting_end_datetime_utc_normalized else None,
                         "language": language,
                         "quickmode": is_quick_mode,
+                        "exportexcel": is_export_excel,
+                        "exportdocx": is_export_docx,
                     }
                     cache_params_json = json.dumps(cache_params, sort_keys=True)
                     cache_key = 'report:combinedequipmentbatch:' + \
@@ -226,14 +247,15 @@ class Reporting:
 
             space_ids = list(space_dict.keys())
             if space_ids:
+                space_ids_placeholders = ','.join(['%s'] * len(space_ids))
                 cursor_system_db.execute(" SELECT ce.id, ce.name AS combined_equipment_name, "
                                          "        ce.uuid AS combined_equipment_uuid, s.name AS space_name, "
                                          "        s.id AS space_id, cc.name AS cost_center_name, ce.description "
                                          " FROM tbl_spaces s, tbl_spaces_combined_equipments sce, "
                                          "      tbl_combined_equipments ce, tbl_cost_centers cc "
-                                         " WHERE s.id IN ( " + ', '.join(map(str, space_ids)) + ") "
+                                         " WHERE s.id IN ( " + space_ids_placeholders + ") "
                                          "       AND sce.space_id = s.id AND sce.combined_equipment_id = ce.id "
-                                         "       AND ce.cost_center_id = cc.id  ", )
+                                         "       AND ce.cost_center_id = cc.id  ", tuple(space_ids))
                 rows_combined_equipments = cursor_system_db.fetchall()
                 if rows_combined_equipments is not None and len(rows_combined_equipments) > 0:
                     for row in rows_combined_equipments:
@@ -282,29 +304,72 @@ class Reporting:
                                                  "unit_of_measure": row_energy_category[2]})
 
             ############################################################################################################
-            # Step 5: query reporting period energy input
+            # Step 5: query reporting period energy input, cost, and carbon emissions
             ############################################################################################################
+            cnx_billing_db = mysql.connector.connect(**config.myems_billing_db)
+            cursor_billing_db = cnx_billing_db.cursor()
+            cnx_carbon_db = mysql.connector.connect(**config.myems_carbon_db)
+            cursor_carbon_db = cnx_carbon_db.cursor()
+
             if combined_equipment_dict:
                 combined_equipment_ids = list(combined_equipment_dict.keys())
-                cursor_energy_db.execute(
-                    " SELECT combined_equipment_id, energy_category_id, SUM(actual_value) "
-                    " FROM tbl_combined_equipment_input_category_hourly "
-                    " WHERE combined_equipment_id IN (" + ', '.join(map(str, combined_equipment_ids)) + ") "
-                    "     AND start_datetime_utc >= %s "
-                    "     AND start_datetime_utc < %s "
-                    " GROUP BY combined_equipment_id, energy_category_id ",
-                    (reporting_start_datetime_utc, reporting_end_datetime_utc))
-                rows_combined_equipment_energy = cursor_energy_db.fetchall()
-                # build mapping: combined_equipment_id -> {energy_category_id: sum_value}
-                energy_map = {}
-                for row in rows_combined_equipment_energy:
-                    energy_map.setdefault(row[0], {})[row[1]] = row[2]
-                for combined_equipment_id in combined_equipment_dict:
-                    for energy_category in energy_category_list:
-                        subtotal = Decimal(0.0)
-                        if combined_equipment_id in energy_map and energy_category['id'] in energy_map[combined_equipment_id]:
-                            subtotal = energy_map[combined_equipment_id][energy_category['id']]
-                        combined_equipment_dict[combined_equipment_id]['values'].append(subtotal)
+                if not combined_equipment_ids:
+                    combined_equipment_ids = None
+                else:
+                    combined_equipment_ids_placeholders = ','.join(['%s'] * len(combined_equipment_ids))
+                    # Query energy consumption
+                    cursor_energy_db.execute(
+                        " SELECT combined_equipment_id, energy_category_id, SUM(actual_value) "
+                        " FROM tbl_combined_equipment_input_category_hourly "
+                        " WHERE combined_equipment_id IN (" + combined_equipment_ids_placeholders + ") "
+                        "     AND start_datetime_utc >= %s "
+                        "     AND start_datetime_utc < %s "
+                        " GROUP BY combined_equipment_id, energy_category_id ",
+                        tuple(combined_equipment_ids) + (reporting_start_datetime_utc, reporting_end_datetime_utc))
+                    rows_combined_equipment_energy = cursor_energy_db.fetchall()
+                    # build mapping: combined_equipment_id -> {energy_category_id: sum_value}
+                    energy_map = {}
+                    for row in rows_combined_equipment_energy:
+                        energy_map.setdefault(row[0], {})[row[1]] = row[2]
+                    for combined_equipment_id in combined_equipment_dict:
+                        for energy_category in energy_category_list:
+                            subtotal = Decimal(0.0)
+                            if combined_equipment_id in energy_map and energy_category['id'] in energy_map[combined_equipment_id]:
+                                subtotal = energy_map[combined_equipment_id][energy_category['id']]
+                            combined_equipment_dict[combined_equipment_id]['values'].append(subtotal)
+
+                    # Query cost
+                    cursor_billing_db.execute(
+                        " SELECT combined_equipment_id, SUM(actual_value) "
+                        " FROM tbl_combined_equipment_input_category_hourly "
+                        " WHERE combined_equipment_id IN (" + combined_equipment_ids_placeholders + ") "
+                        "     AND start_datetime_utc >= %s "
+                        "     AND start_datetime_utc < %s "
+                        " GROUP BY combined_equipment_id ",
+                        tuple(combined_equipment_ids) + (reporting_start_datetime_utc, reporting_end_datetime_utc))
+                    rows_combined_equipment_cost = cursor_billing_db.fetchall()
+                    cost_map = {}
+                    for row in rows_combined_equipment_cost:
+                        cost_map[row[0]] = row[1]
+
+                    # Query carbon emissions
+                    cursor_carbon_db.execute(
+                        " SELECT combined_equipment_id, SUM(actual_value) "
+                        " FROM tbl_combined_equipment_input_category_hourly "
+                        " WHERE combined_equipment_id IN (" + combined_equipment_ids_placeholders + ") "
+                        "     AND start_datetime_utc >= %s "
+                        "     AND start_datetime_utc < %s "
+                        " GROUP BY combined_equipment_id ",
+                        tuple(combined_equipment_ids) + (reporting_start_datetime_utc, reporting_end_datetime_utc))
+                    rows_combined_equipment_carbon = cursor_carbon_db.fetchall()
+                    carbon_map = {}
+                    for row in rows_combined_equipment_carbon:
+                        carbon_map[row[0]] = row[1]
+
+                    # Attach cost and carbon to combined_equipment_dict
+                    for combined_equipment_id in combined_equipment_dict:
+                        combined_equipment_dict[combined_equipment_id]['cost'] = cost_map.get(combined_equipment_id, 0.0)
+                        combined_equipment_dict[combined_equipment_id]['carbon_emissions'] = carbon_map.get(combined_equipment_id, 0.0)
         finally:
             if cursor_energy_db is not None:
                 try:
@@ -314,6 +379,26 @@ class Reporting:
             if cnx_energy_db is not None:
                 try:
                     cnx_energy_db.close()
+                except Exception as e:
+                    logger.warning(f"Ignored exception: {e}")
+            if cursor_billing_db is not None:
+                try:
+                    cursor_billing_db.close()
+                except Exception as e:
+                    logger.warning(f"Ignored exception: {e}")
+            if cnx_billing_db is not None:
+                try:
+                    cnx_billing_db.close()
+                except Exception as e:
+                    logger.warning(f"Ignored exception: {e}")
+            if cursor_carbon_db is not None:
+                try:
+                    cursor_carbon_db.close()
+                except Exception as e:
+                    logger.warning(f"Ignored exception: {e}")
+            if cnx_carbon_db is not None:
+                try:
+                    cnx_carbon_db.close()
                 except Exception as e:
                     logger.warning(f"Ignored exception: {e}")
             if cursor_system_db is not None:
@@ -340,19 +425,35 @@ class Reporting:
                 "cost_center_name": combined_equipment['cost_center_name'],
                 "description": combined_equipment['description'],
                 "values": combined_equipment['values'],
+                "cost": combined_equipment.get('cost', 0.0),
+                "carbon_emissions": combined_equipment.get('carbon_emissions', 0.0),
             })
 
         result = {'combined_equipments': combined_equipment_list, 'energycategories': energy_category_list,
-                  'excel_bytes_base64': None}
+                  'excel_bytes_base64': None, 'docx_bytes_base64': None}
 
-        # export result to Excel file and then encode the file to base64 string
+        # export result to Excel/DOCX file and then encode the file to base64 string
         if not is_quick_mode:
-            result['excel_bytes_base64'] = \
-                excelexporters.combinedequipmentbatch.export(result,
-                                                             space_name,
-                                                             reporting_period_start_datetime_local,
-                                                             reporting_period_end_datetime_local,
-                                                             language)
+            if is_export_excel:
+                try:
+                    result['excel_bytes_base64'] = \
+                        excelexporters.combinedequipmentbatch.export(result,
+                                                                     space_name,
+                                                                     reporting_period_start_datetime_local,
+                                                                     reporting_period_end_datetime_local,
+                                                                     language)
+                except Exception:
+                    logger.error("Failed to export Excel", exc_info=True)
+            if is_export_docx:
+                try:
+                    result['docx_bytes_base64'] = \
+                        docxexporters.combinedequipmentbatch.export(result,
+                                                                    space_name,
+                                                                    reporting_period_start_datetime_local,
+                                                                    reporting_period_end_datetime_local,
+                                                                    language)
+                except Exception:
+                    logger.error("Failed to export DOCX", exc_info=True)
         resp_text = json.dumps(result)
         resp.text = resp_text
 

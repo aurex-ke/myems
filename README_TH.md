@@ -1,9 +1,9 @@
 <p align="center">
    <img alt="logo" src="https://myems.cn/img/myems.png" width="150" height="150">
 </p>
-<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">MyEMS v6.7.0</h1>
+<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">MyEMS v6.8.0</h1>
 <h3 align="center">ระบบจัดการพลังงานโอเพ่นซอร์สชั้นนำของอุตสาหกรรม</h3>
-<h6 align="center">เกือบพันกรณีโครงการ</h6>
+<h6 align="center">กว่าพันกรณีโครงการ, ได้รับใบรับรองการทดสอบ CMA</h6>
 <h6 align="center">มุ่งมั่นที่จะเป็นโอเพ่นซอร์สตลอดไป</h6>
 <h6 align="center">การสนับสนุนทางเทคนิคฟรีในกลุ่ม QQ และ WeChat</h6>
 <h6 align="center">การบำรุงรักษาอย่างต่อเนื่อง 1 เวอร์ชันย่อยต่อเดือน 1 เวอร์ชันหลักต่อปี</h6>
@@ -14,7 +14,7 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/b2cd6049727240e2aaeb8fc7b4086166)](https://app.codacy.com/gh/MyEMS/myems/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 
-[简体中文](./README_CN.md) | [English](./README_EN.md) | [Deutsch](./README_DE.md) | [Español](./README_ES.md) | [Français](./README_FR.md) | [Italiano](./README_IT.md) | [Nederlands](./README_NL.md) | [Polski](./README_PO.md) | [Português](./README_PT.md) | [Русский](./README_RU.md) | [日本語](./README_JP.md) | [한국어](./README_KR.md) | [繁體中文](./README_TW.md) | [العربية](./README_AR.md) | [فارسی](./README_FA.md) | [ไทย](./README_TH.md) | [हिन्दी](./README_HI.md) | [Bahasa Indonesia](./README_ID.md) | [Bahasa Melayu](./README_MS.md) | [Türkçe](./README_TR.md)
+[简体中文](./README_CN.md) | [English](./README.md) | [Deutsch](./README_DE.md) | [Español](./README_ES.md) | [Français](./README_FR.md) | [Italiano](./README_IT.md) | [Nederlands](./README_NL.md) | [Polski](./README_PO.md) | [Português](./README_PT.md) | [Русский](./README_RU.md) | [日本語](./README_JP.md) | [한국어](./README_KR.md) | [繁體中文](./README_TW.md) | [العربية](./README_AR.md) | [فارسی](./README_FA.md) | [ไทย](./README_TH.md) | [हिन्दी](./README_HI.md) | [Bahasa Indonesia](./README_ID.md) | [Bahasa Melayu](./README_MS.md) | [Türkçe](./README_TR.md) | [Tiếng Việt](./README_VI.md)
 ## แนะนำ MyEMS
 
 ระบบจัดการพลังงานโอเพ่นซอร์ส MyEMS อ้างอิงมาตรฐาน ISO 50001 การจัดการพลังงาน (GB/T 23331-2020) ใช้ได้กับอาคาร โรงงาน ศูนย์การค้า โรงพยาบาล สวนอุตสาหกรรม และศูนย์จัดการพลังงานและคาร์บอน สำหรับการรวบรวม วิเคราะห์ และรายงานพลังงานและการปล่อยคาร์บอนสำหรับไฟฟ้า น้ำ ก๊าซ ความเย็น ความร้อน ฯลฯ รวมถึงฟังก์ชันเสริมของเวอร์ชันองค์กร เช่น พลังงานแสงอาทิตย์ การจัดเก็บพลังงาน สถานีชาร์จ ไมโครกริด โรงไฟฟ้าเสมือน การควบคุมอุปกรณ์ การวินิจฉัยข้อผิดพลาด การจัดการใบสั่งงาน และการปรับปรุงปัญญาประดิษฐ์ พัฒนาและบำรุงรักษาโดยบริษัทมืออาชีพที่มีประสบการณ์ รับประกันการสนับสนุนระยะยาว ใช้โอเพ่นซอร์สเพื่อช่วยกลุ่มองค์กร สวนอุตสาหกรรม และผู้ประกอบการพลังงานในการพัฒนาคาร์บอนต่ำ!
@@ -89,11 +89,11 @@
 
 ## ฟีเจอร์เวอร์ชันชุมชน MyEMS
 
-ดู [https://myems.cn/docs/intro#myems-features](https://myems.cn/docs/intro#myems-features) สำหรับรายละเอียด
+ดู [https://myems.cn/th/docs/community](https://myems.cn/th/docs/community) สำหรับรายละเอียด
 
 ## ฟีเจอร์เวอร์ชันองค์กร MyEMS
 
-ดู [https://myems.cn/docs/enterprise](https://myems.cn/docs/enterprise) สำหรับรายละเอียด
+ดู [https://myems.cn/th/docs/enterprise](https://myems.cn/th/docs/enterprise) สำหรับรายละเอียด
 
 
 ## ดาวน์โหลด MyEMS (เวอร์ชันชุมชน)
@@ -120,39 +120,39 @@
 
 ## การติดตั้ง MyEMS (เวอร์ชันชุมชน)
 
-ดู [https://myems.cn/docs/category/installation](https://myems.cn/docs/category/installation) สำหรับรายละเอียด
+ดู [https://myems.cn/th/docs/category/installation](https://myems.cn/th/docs/category/installation) สำหรับรายละเอียด
 
 ## องค์ประกอบของคอมโพเนนต์ MyEMS
 
-### ฐานข้อมูล MyEMS (SQL)
+### ฐานข้อมูล MyEMS
 
 ดูการแนะนำ [database](./database/README.md)
 
-### อินเทอร์เฟซแอปพลิเคชัน API MyEMS (Python)
+### อินเทอร์เฟซแอปพลิเคชัน API MyEMS
 
 ดูการแนะนำ [myems-api](./myems-api/README.md)
 
-### อินเทอร์เฟซผู้ใช้แอดมิน MyEMS (AngularJS เวอร์ชัน 1.x)
+### อินเทอร์เฟซผู้ใช้แอดมิน MyEMS
 
 ดูการแนะนำ [myems-admin](myems-admin/README.md)
 
-### บริการรวบรวมข้อมูล Modbus TCP MyEMS (Python)
+### บริการรวบรวมข้อมูล Modbus TCP MyEMS
 
 ดูการแนะนำ [myems-modbus-tcp](./myems-modbus-tcp/README.md)
 
-### บริการทำความสะอาดข้อมูล MyEMS (Python)
+### บริการทำความสะอาดข้อมูล MyEMS
 
 ดูการแนะนำ [myems-cleaning](./myems-cleaning/README.md)
 
-### บริการมาตรฐานข้อมูล MyEMS (Python)
+### บริการมาตรฐานข้อมูล MyEMS
 
 ดูการแนะนำ [myems-normalization](./myems-normalization/README.md)
 
-### บริการรวมข้อมูล MyEMS (Python)
+### บริการรวมข้อมูล MyEMS
 
 ดูการแนะนำ [myems-aggregation](./myems-aggregation/README.md)
 
-### อินเทอร์เฟซผู้ใช้เว็บ MyEMS (ReactJS)
+### อินเทอร์เฟซผู้ใช้เว็บ MyEMS
 
 ดูการแนะนำ [myems-web](myems-web/README.md)
 
@@ -186,28 +186,21 @@ Web UI:
 - ผู้ติดต่อ: Zhang Nengyuan
 - โทรศัพท์ WeChat: (+86) 13011132526
 - อีเมล: zny@myems.org
-- LINE ID: myems
-- WhatsApp: https://wa.me/message/6HB55A46RVAJP1
 
 | Platform | Description | QR Code |
-|----------|--------------|---------|
-| WeChat | 13011132526 | ![WeChat: 13011132526](./docs/images/qr_code_wechat.png) |
-| Line | MyEMS | ![Line: MyEMS](./docs/images/qr_code_line.png) |
-| WhatsApp | MyEMS | ![WhatsAPP: MyEMS](./docs/images/qr_code_whatsapp.png) |
-| Feishu | 13011132526 | ![Feishu: 13011132526](./docs/images/qr_code_feishu.png) |
-| บัญชี WeChat อย่างเป็นทางการ | ระบบจัดการพลังงานโอเพ่นซอร์ส | ![ระบบจัดการพลังงานโอเพ่นซอร์ส](./docs/images/qr_code_mp_weixin.png) |
-| WeChat Channels | ระบบจัดการพลังงานโอเพนซอร์ส | ![ระบบจัดการพลังงานโอเพนซอร์ส](./docs/images/qr_code_wechat_channels.png) |
-| กลุ่ม WeChat | กลุ่ม WeChat | ![กลุ่ม WeChat](./docs/images/qr_code_wechat_group.png) |
-| กลุ่ม QQ | 792528967 | ![กลุ่ม QQ](./docs/images/qr_code_qq_group.png) |
-| Xiaohongshu | Xiaohongshu | ![Xiaohongshju](./docs/images/qr_code_xiaohongshu.png) |
+|---------|--------------|---------|
+| 微信      | 13011132526 | ![WeChat: 13011132526](./docs/images/qr_code_wechat.png) |
+| 飞书      | 13011132526 | ![Feishu: 13011132526](./docs/images/qr_code_feishu.png) |
+| 微信公众号     | ระบบจัดการพลังงานโอเพ่นซอร์ส | ![ระบบจัดการพลังงานโอเพ่นซอร์ส](./docs/images/qr_code_mp_weixin.png) |
+| 微信视频号     | MyEMS ระบบจัดการพลังงานโอเพนซอร์ส | ![MyEMS ระบบจัดการพลังงานโอเพนซอร์ส](./docs/images/qr_code_wechat_channels.png) |
+| 微信群     | กลุ่ม WeChat | ![กลุ่ม WeChat](./docs/images/qr_code_wechat_group.png) |
+| QQ群     | 792528967 | ![QQ群](./docs/images/qr_code_qq_group.png) |
+| 小红书     | Xiaohongshu | ![Xiaohongshju](./docs/images/qr_code_xiaohongshu.png) |
 
 ## วิดีโอ
 
-[BiliBili](https://space.bilibili.com/539108162)
 
-[YouTube](https://www.youtube.com/@myems)
-
-## 🔖 ลิงก์มิตรภาพ
+## 🔖 แนะนำ
 
 - 👉 แบบฟอร์มเวิร์กโฟลว์ BPM Chichang โค้ดต่ำ : [https://gitee.com/opencc/ccflow](https://gitee.com/opencc/ccflow)
 - 👉 IoTGateway: เกตเวย์ IoT ข้ามแพลตฟอร์มที่ใช้ .NET6 [https://gitee.com/iioter/iotgateway](https://gitee.com/iioter/iotgateway)

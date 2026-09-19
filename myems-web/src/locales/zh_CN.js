@@ -69,6 +69,7 @@ export default {
         'Space Production': '产量能耗分析',
         'Equipment Tracking': '设备台账',
         'Equipment Comparison': '对比分析',
+        'Equipment Realtime Monitor': '设备实时监控',
         'Shopfloor Comparison': '对比分析',
         'Store Comparison': '对比分析',
         'Space Comparison': '对比分析',
@@ -117,6 +118,7 @@ export default {
         'Combined Equipments': '组合设备',
         'Energy Storage Power Station List': '电站列表',
         'Energy Storage Power Station Details': '设备监控',
+        'Trend in the last hour of Main Parameter': '最近一小时主参数趋势',
         'Energy Storage Power Station Reporting': '数据报表',
         'Energy Storage Power Station Alarm': '故障报警',
         'Energy Storage Power Station Maintenance': '维护保养',
@@ -574,6 +576,7 @@ export default {
         'Please wait for approval': '请等待审核',
         //notification
         Notifications: '通知',
+        'Notification': '通知',
         'Mark all as read': '全部设为已读',
         'View all': '全部',
         'Notification New': '新的',
@@ -1424,6 +1427,7 @@ export default {
         mean: '平均值',
         std: '标准差',
         p5: 'P5',
-        p95: 'P95'
+        p95: 'P95',
+        'Home': '首页'
     }
 };

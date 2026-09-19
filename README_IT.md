@@ -1,9 +1,9 @@
 <p align="center">
    <img alt="logo" src="https://myems.cn/img/myems.png" width="150" height="150">
 </p>
-<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">MyEMS v6.7.0</h1>
+<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">MyEMS v6.8.0</h1>
 <h3 align="center">Sistema di Gestione dell'Energia Open Source Leader del Settore</h3>
-<h6 align="center">Quasi mille casi di progetto</h6>
+<h6 align="center">Oltre mille casi di progetto, certificazione di prova CMA</h6>
 <h6 align="center">Impegno di essere Open Source per sempre</h6>
 <h6 align="center">Supporto tecnico gratuito nel gruppo QQ e WeChat</h6>
 <h6 align="center">Mantenimento degli aggiornamenti, rilascio mensile di una versione minore, rilascio annuale di una versione maggiore</h6>
@@ -14,7 +14,7 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/b2cd6049727240e2aaeb8fc7b4086166)](https://app.codacy.com/gh/MyEMS/myems/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 
-[简体中文](./README_CN.md) | [English](./README_EN.md) | [Deutsch](./README_DE.md) | [Español](./README_ES.md) | [Français](./README_FR.md) | [Italiano](./README_IT.md) | [Nederlands](./README_NL.md) | [Polski](./README_PO.md) | [Português](./README_PT.md) | [Русский](./README_RU.md) | [日本語](./README_JP.md) | [한국어](./README_KR.md) | [繁體中文](./README_TW.md) | [العربية](./README_AR.md) | [فارسی](./README_FA.md) | [ไทย](./README_TH.md) | [हिन्दी](./README_HI.md) | [Bahasa Indonesia](./README_ID.md) | [Bahasa Melayu](./README_MS.md) | [Türkçe](./README_TR.md)
+[简体中文](./README_CN.md) | [English](./README.md) | [Deutsch](./README_DE.md) | [Español](./README_ES.md) | [Français](./README_FR.md) | [Italiano](./README_IT.md) | [Nederlands](./README_NL.md) | [Polski](./README_PO.md) | [Português](./README_PT.md) | [Русский](./README_RU.md) | [日本語](./README_JP.md) | [한국어](./README_KR.md) | [繁體中文](./README_TW.md) | [العربية](./README_AR.md) | [فارسی](./README_FA.md) | [ไทย](./README_TH.md) | [हिन्दी](./README_HI.md) | [Bahasa Indonesia](./README_ID.md) | [Bahasa Melayu](./README_MS.md) | [Türkçe](./README_TR.md) | [Tiếng Việt](./README_VI.md)
 ## Introduzione a MyEMS
 
 Il sistema open source di gestione dell'energia MyEMS fa riferimento allo standard di sistema di gestione dell'energia ISO 50001 (GB/T 23331-2020). È adatto per l'acquisizione, l'analisi e la rendicontazione di energia e emissioni di carbonio come elettricità, acqua, gas, raffreddamento, calore, ecc., in edifici, fabbriche, centri commerciali, ospedali, parchi industriali e centri di gestione dell'energia e del carbonio. Include anche funzioni opzionali per l'edizione aziendale come fotovoltaico, accumulo di energia, stazioni di ricarica, microreti, centrali elettriche virtuali, controllo dei dispositivi, diagnostica dei guasti, gestione degli ordini di lavoro, ottimizzazione dell'intelligenza artificiale. Sviluppato e mantenuto da un'azienda professionale esperta, garantisce supporto a lungo termine. Usiamo l'open source per aiutare le imprese, i gruppi aziendali, i parchi industriali e gli operatori energetici nello sviluppo a basse emissioni di carbonio!
@@ -89,11 +89,11 @@ Il sistema open source di gestione dell'energia MyEMS fa riferimento allo standa
 
 ## Funzioni dell'edizione Community di MyEMS
 
-Per dettagli vedere [https://myems.cn/docs/intro#myems-features](https://myems.cn/docs/intro#myems-features)
+Per dettagli vedere [https://myems.cn/it/docs/community](https://myems.cn/it/docs/community)
 
 ## Funzioni dell'edizione Enterprise di MyEMS
 
-Per dettagli vedere [https://myems.cn/docs/enterprise](https://myems.cn/docs/enterprise)
+Per dettagli vedere [https://myems.cn/it/docs/enterprise](https://myems.cn/it/docs/enterprise)
 
 
 ## Download di MyEMS (Edizione Community)
@@ -120,39 +120,39 @@ Per dettagli vedere [https://myems.cn/docs/enterprise](https://myems.cn/docs/ent
 
 ## Installazione di MyEMS (Edizione Community)
 
-Per dettagli vedere [https://myems.cn/docs/category/installation](https://myems.cn/docs/category/installation)
+Per dettagli vedere [https://myems.cn/it/docs/category/installation](https://myems.cn/it/docs/category/installation)
 
 ## Componenti di MyEMS
 
-### Database di MyEMS (SQL)
+### Database di MyEMS
 
 Vedere l'introduzione in [database](./database/README.md)
 
-### API di MyEMS Interfaccia Applicativa (Python)
+### API di MyEMS Interfaccia Applicativa
 
 Vedere l'introduzione in [myems-api](./myems-api/README.md)
 
-### Interfaccia utente di amministrazione di MyEMS (AngularJS versione 1.x)
+### Interfaccia utente di amministrazione di MyEMS
 
 Vedere l'introduzione in [myems-admin](myems-admin/README.md)
 
-### Servizio di acquisizione dati MyEMS Modbus TCP (Python)
+### Servizio di acquisizione dati MyEMS Modbus TCP
 
 Vedere l'introduzione in [myems-modbus-tcp](./myems-modbus-tcp/README.md)
 
-### Servizio di pulizia dati MyEMS (Python)
+### Servizio di pulizia dati MyEMS
 
 Vedere l'introduzione in [myems-cleaning](./myems-cleaning/README.md)
 
-### Servizio di normalizzazione dati MyEMS (Python)
+### Servizio di normalizzazione dati MyEMS
 
 Vedere l'introduzione in [myems-normalization](./myems-normalization/README.md)
 
-### Servizio di aggregazione dati MyEMS (Python)
+### Servizio di aggregazione dati MyEMS
 
 Vedere l'introduzione in [myems-aggregation](./myems-aggregation/README.md)
 
-### Interfaccia utente web di MyEMS (ReactJS)
+### Interfaccia utente web di MyEMS
 
 Vedere l'introduzione in [myems-web](myems-web/README.md)
 
@@ -186,28 +186,21 @@ Password：!MyEMS1
 - Contatto: Zhang Nengyuan
 - Telefono/WeChat: (+86) 13011132526
 - Email: zny@myems.org
-- LINE ID: myems
-- WhatsApp: https://wa.me/message/6HB55A46RVAJP1
 
 | Platform | Description | QR Code |
-|----------|--------------|---------|
-| WeChat | 13011132526 | ![WeChat: 13011132526](./docs/images/qr_code_wechat.png) |
-| Line | MyEMS | ![Line: MyEMS](./docs/images/qr_code_line.png) |
-| WhatsApp | MyEMS | ![WhatsAPP: MyEMS](./docs/images/qr_code_whatsapp.png) |
-| Feishu | 13011132526 | ![Feishu: 13011132526](./docs/images/qr_code_feishu.png) |
-| Account ufficiale WeChat | Sistema Open Source di Gestione dell'Energia | ![Sistema Open Source di Gestione dell'Energia](./docs/images/qr_code_mp_weixin.png) |
-| WeChat Channels | Sistema di Gestione dell'Energia Open Source | ![Sistema di Gestione dell'Energia Open Source](./docs/images/qr_code_wechat_channels.png) |
-| Gruppo WeChat | Gruppo WeChat | ![Gruppo WeChat](./docs/images/qr_code_wechat_group.png) |
-| Gruppo QQ | 792528967 | ![Gruppo QQ](./docs/images/qr_code_qq_group.png) |
-| Xiaohongshu | Xiaohongshu | ![Xiaohongshju](./docs/images/qr_code_xiaohongshu.png) |
+|---------|--------------|---------|
+| 微信      | 13011132526 | ![WeChat: 13011132526](./docs/images/qr_code_wechat.png) |
+| 飞书      | 13011132526 | ![Feishu: 13011132526](./docs/images/qr_code_feishu.png) |
+| 微信公众号     | Sistema di gestione dell'energia open source | ![Sistema di gestione dell'energia open source](./docs/images/qr_code_mp_weixin.png) |
+| 微信视频号     | MyEMS Sistema di Gestione dell'Energia Open Source | ![MyEMS Sistema di Gestione dell'Energia Open Source](./docs/images/qr_code_wechat_channels.png) |
+| 微信群     | Gruppo WeChat | ![Gruppo WeChat](./docs/images/qr_code_wechat_group.png) |
+| QQ群     | 792528967 | ![QQ群](./docs/images/qr_code_qq_group.png) |
+| 小红书     | Xiaohongshu | ![Xiaohongshju](./docs/images/qr_code_xiaohongshu.png) |
 
 ## Video
 
-[BiliBili](https://space.bilibili.com/539108162)
 
-[YouTube](https://www.youtube.com/@myems)
-
-## 🔖 Link amichevoli
+## 🔖 Raccomandazioni
 
 - 👉 BPM a basso codice Chizheng flusso di lavoro form: [https://gitee.com/opencc/ccflow](https://gitee.com/opencc/ccflow)
 - 👉 IoTGateway: Gateway IoT multipiattaforma basato su .NET6 [https://gitee.com/iioter/iotgateway](https://gitee.com/iioter/iotgateway)

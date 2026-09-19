@@ -69,6 +69,7 @@ export default {
         'Space Production': '생산량 에너지 소비 분석',
         'Equipment Tracking': '장비 대장',
         'Equipment Comparison': '비교 분석',
+        'Equipment Realtime Monitor': '장비 실시간 모니터링',
         'Shopfloor Comparison': '비교 분석',
         'Store Comparison': '비교 분석',
         'Space Comparison': '비교 분석',
@@ -117,6 +118,7 @@ export default {
         'Combined Equipments': '복합 장비',
         'Energy Storage Power Station List': '발전소 목록',
         'Energy Storage Power Station Details': '장비 모니터링',
+        'Trend in the last hour of Main Parameter': '주요 파라미터의 최근 1시간 추세',
         'Energy Storage Power Station Reporting': '데이터 보고서',
         'Energy Storage Power Station Alarm': '고장 알람',
         'Energy Storage Power Station Maintenance': '유지 보수',
@@ -559,6 +561,7 @@ Please copy it to the input box below.':
         'Please wait for approval': '승인을 기다려주세요',
         //notification
         Notifications: '알림',
+        'Notification': '알림',
         'Mark all as read': '모두 읽음으로 표시',
         'View all': '모두 보기',
         'Notification New': '새로운',
@@ -1400,6 +1403,7 @@ Please copy it to the input box below.':
         mean: '평균',
         std: '표준 편차',
         p5: 'P5',
-        p95: 'P95'
+        p95: 'P95',
+        'Home': '홈'
     }
 };

@@ -69,6 +69,7 @@ export default {
         'Space Production': 'Space Production',
         'Equipment Tracking': 'Ekipman Takibi',
         'Equipment Comparison': 'Ekipman Karşılaştırması',
+        'Equipment Realtime Monitor': 'Ekipman Gerçek Zamanlı İzleme',
         'Shopfloor Comparison': 'Ekipman Karşılaştırması',
         'Store Comparison': 'Ekipman Karşılaştırması',
         'Space Comparison': 'Ekipman Karşılaştırması',
@@ -117,6 +118,7 @@ export default {
         'Combined Equipments': 'Kombine Ekipmanlar',
         'Energy Storage Power Station List': 'List',
         'Energy Storage Power Station Details': 'Details',
+        'Trend in the last hour of Main Parameter': 'Ana Parametrenin Son Bir Saatteki Trendi',
         'Energy Storage Power Station Reporting': 'Reporting',
         'Energy Storage Power Station Alarm': 'Alarm',
         'Energy Storage Power Station Maintenance': 'Maintenance',
@@ -586,6 +588,7 @@ export default {
         'Please wait for approval': 'Lütfen onay için bekleyin',
         //notification
         Notifications: 'Bildirim',
+        'Notification': 'Bildirim',
         'Mark all as read': 'Tümünü okundu olarak işaretle',
         'View all': 'Tüm',
         'Notification New': 'YENİ',
@@ -1427,6 +1430,7 @@ bağlantısına tıklamış gibi görünüyorsunuz. Lütfen tekrar deneyin.',
         mean: 'Purata',
         std: 'Sisihan piawai',
         p5: 'P5',
-        p95: 'P95'
+        p95: 'P95',
+        'Home': 'Ana Sayfa'
     }
 };

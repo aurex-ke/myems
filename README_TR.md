@@ -1,9 +1,9 @@
 <p align="center">
    <img alt="logo" src="https://myems.cn/img/myems.png" width="150" height="150">
 </p>
-<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">MyEMS v6.7.0</h1>
+<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">MyEMS v6.8.0</h1>
 <h3 align="center">Endüstrinin önde gelen açık kaynak enerji yönetim sistemi</h3>
-<h6 align="center">Neredeyse bin proje vakası</h6>
+<h6 align="center">Bindan fazla proje vakası, CMA test sertifikası aldı</h6>
 <h6 align="center">Sonsuza kadar açık kaynak kalma taahhüdü</h6>
 <h6 align="center">QQ ve WeChat gruplarında ücretsiz teknik destek</h6>
 <h6 align="center">Sürekli bakım, ayda 1 küçük sürüm, yılda 1 büyük sürüm</h6>
@@ -14,7 +14,7 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/b2cd6049727240e2aaeb8fc7b4086166)](https://app.codacy.com/gh/MyEMS/myems/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 
-[简体中文](./README_CN.md) | [English](./README_EN.md) | [Deutsch](./README_DE.md) | [Español](./README_ES.md) | [Français](./README_FR.md) | [Italiano](./README_IT.md) | [Nederlands](./README_NL.md) | [Polski](./README_PO.md) | [Português](./README_PT.md) | [Русский](./README_RU.md) | [日本語](./README_JP.md) | [한국어](./README_KR.md) | [繁體中文](./README_TW.md) | [العربية](./README_AR.md) | [فارسی](./README_FA.md) | [ไทย](./README_TH.md) | [हिन्दी](./README_HI.md) | [Bahasa Indonesia](./README_ID.md) | [Bahasa Melayu](./README_MS.md) | [Türkçe](./README_TR.md)
+[简体中文](./README_CN.md) | [English](./README.md) | [Deutsch](./README_DE.md) | [Español](./README_ES.md) | [Français](./README_FR.md) | [Italiano](./README_IT.md) | [Nederlands](./README_NL.md) | [Polski](./README_PO.md) | [Português](./README_PT.md) | [Русский](./README_RU.md) | [日本語](./README_JP.md) | [한국어](./README_KR.md) | [繁體中文](./README_TW.md) | [العربية](./README_AR.md) | [فارسی](./README_FA.md) | [ไทย](./README_TH.md) | [हिन्दी](./README_HI.md) | [Bahasa Indonesia](./README_ID.md) | [Bahasa Melayu](./README_MS.md) | [Türkçe](./README_TR.md) | [Tiếng Việt](./README_VI.md)
 ## MyEMS'ye Giriş
 
 Açık kaynak enerji yönetim sistemi MyEMS, ISO 50001 enerji yönetim standardına (GB/T 23331-2020) atıfta bulunur, binalar, fabrikalar, alışveriş merkezleri, hastaneler, endüstriyel parklar ve enerji ve karbon yönetim merkezleri için elektrik, su, gaz, soğuk, sıcak vb. için enerji ve karbon emisyonlarının toplanması, analizi ve raporlanması için uygulanabilir. Ayrıca fotovoltaik, enerji depolama, şarj istasyonları, mikro şebekeler, sanal güç santralleri, ekipman kontrolü, arıza teşhisi, iş emri yönetimi ve yapay zeka optimizasyonu gibi kurumsal sürüm isteğe bağlı işlevlerini de içerir. Deneyimli profesyonel bir şirket tarafından geliştirilmiş ve sürdürülmektedir, uzun vadeli desteği garanti eder. Kurumsal gruplar, endüstriyel parklar ve enerji operatörlerinin düşük karbonlu gelişimine yardımcı olmak için açık kaynak kullanın!
@@ -89,11 +89,11 @@ Açık kaynak enerji yönetim sistemi MyEMS, ISO 50001 enerji yönetim standard�
 
 ## MyEMS Topluluk Sürümü Özellikleri
 
-Detaylar için [https://myems.cn/docs/intro#myems-features](https://myems.cn/docs/intro#myems-features) bakın
+Detaylar için [https://myems.cn/tr/docs/community](https://myems.cn/tr/docs/community) bakın
 
 ## MyEMS Kurumsal Sürümü Özellikleri
 
-Detaylar için [https://myems.cn/docs/enterprise](https://myems.cn/docs/enterprise) bakın
+Detaylar için [https://myems.cn/tr/docs/enterprise](https://myems.cn/tr/docs/enterprise) bakın
 
 
 ## MyEMS İndirme (Topluluk Sürümü)
@@ -120,39 +120,39 @@ Detaylar için [https://myems.cn/docs/enterprise](https://myems.cn/docs/enterpri
 
 ## MyEMS Kurulum (Topluluk Sürümü)
 
-Detaylar için [https://myems.cn/docs/category/installation](https://myems.cn/docs/category/installation) bakın
+Detaylar için [https://myems.cn/tr/docs/category/installation](https://myems.cn/tr/docs/category/installation) bakın
 
 ## MyEMS Bileşen Kompozisyonu
 
-### MyEMS Veritabanı (SQL)
+### MyEMS Veritabanı
 
 Giriş için [database](./database/README.md) bakın
 
-### MyEMS API Uygulama Arayüzü (Python)
+### MyEMS API Uygulama Arayüzü
 
 Giriş için [myems-api](./myems-api/README.md) bakın
 
-### MyEMS Admin UI (AngularJS sürüm 1.x)
+### MyEMS Admin UI
 
 Giriş için [myems-admin](myems-admin/README.md) bakın
 
-### MyEMS Modbus TCP Veri Toplama Servisi (Python)
+### MyEMS Modbus TCP Veri Toplama Servisi
 
 Giriş için [myems-modbus-tcp](./myems-modbus-tcp/README.md) bakın
 
-### MyEMS Veri Temizleme Servisi (Python)
+### MyEMS Veri Temizleme Servisi
 
 Giriş için [myems-cleaning](./myems-cleaning/README.md) bakın
 
-### MyEMS Veri Normalizasyon Servisi (Python)
+### MyEMS Veri Normalizasyon Servisi
 
 Giriş için [myems-normalization](./myems-normalization/README.md) bakın
 
-### MyEMS Veri Toplama Servisi (Python)
+### MyEMS Veri Toplama Servisi
 
 Giriş için [myems-aggregation](./myems-aggregation/README.md) bakın
 
-### MyEMS Web UI (ReactJS)
+### MyEMS Web UI
 
 Giriş için [myems-web](myems-web/README.md) bakın
 
@@ -186,28 +186,21 @@ Kullanıcı adı: administrator
 - İletişim: Zhang Nengyuan
 - Telefon WeChat: (+86) 13011132526
 - E-posta: zny@myems.org
-- LINE ID: myems
-- WhatsApp: https://wa.me/message/6HB55A46RVAJP1
 
 | Platform | Description | QR Code |
-|----------|--------------|---------|
-| WeChat | 13011132526 | ![WeChat: 13011132526](./docs/images/qr_code_wechat.png) |
-| Line | MyEMS | ![Line: MyEMS](./docs/images/qr_code_line.png) |
-| WhatsApp | MyEMS | ![WhatsAPP: MyEMS](./docs/images/qr_code_whatsapp.png) |
-| Feishu | 13011132526 | ![Feishu: 13011132526](./docs/images/qr_code_feishu.png) |
-| Resmi WeChat Hesabı | Açık kaynak enerji yönetim sistemi | ![Açık kaynak enerji yönetim sistemi](./docs/images/qr_code_mp_weixin.png) |
-| WeChat Channels | Açık Kaynak Enerji Yönetim Sistemi | ![Açık Kaynak Enerji Yönetim Sistemi](./docs/images/qr_code_wechat_channels.png) |
-| WeChat Grubu | WeChat Grubu | ![WeChat Grubu](./docs/images/qr_code_wechat_group.png) |
-| QQ Grubu | 792528967 | ![QQ Grubu](./docs/images/qr_code_qq_group.png) |
-| Xiaohongshu | Xiaohongshu | ![Xiaohongshju](./docs/images/qr_code_xiaohongshu.png) |
+|---------|--------------|---------|
+| 微信      | 13011132526 | ![WeChat: 13011132526](./docs/images/qr_code_wechat.png) |
+| 飞书      | 13011132526 | ![Feishu: 13011132526](./docs/images/qr_code_feishu.png) |
+| 微信公众号     | Açık kaynak enerji yönetim sistemi | ![Açık kaynak enerji yönetim sistemi](./docs/images/qr_code_mp_weixin.png) |
+| 微信视频号     | MyEMS Açık Kaynak Enerji Yönetim Sistemi | ![MyEMS Açık Kaynak Enerji Yönetim Sistemi](./docs/images/qr_code_wechat_channels.png) |
+| 微信群     | WeChat Grubu | ![WeChat Grubu](./docs/images/qr_code_wechat_group.png) |
+| QQ群     | 792528967 | ![QQ群](./docs/images/qr_code_qq_group.png) |
+| 小红书     | Xiaohongshu | ![Xiaohongshju](./docs/images/qr_code_xiaohongshu.png) |
 
 ## Videolar
 
-[BiliBili](https://space.bilibili.com/539108162)
 
-[YouTube](https://www.youtube.com/@myems)
-
-## 🔖 Dostluk Bağlantıları
+## 🔖 Öneriler
 
 - 👉 Chichang BPM düşük kod iş akışı formu : [https://gitee.com/opencc/ccflow](https://gitee.com/opencc/ccflow)
 - 👉 IoTGateway: .NET6 tabanlı çapraz platform IoT ağ geçidi [https://gitee.com/iioter/iotgateway](https://gitee.com/iioter/iotgateway)

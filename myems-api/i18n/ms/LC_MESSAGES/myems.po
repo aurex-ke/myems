@@ -78,6 +78,21 @@ msgstr "Tan arang batu standard (TCE) mengikut kategori tenaga"
 msgid "Ton of Carbon Dioxide Emissions(TCO2E) by Energy Category"
 msgstr "Tan pelepasan karbon dioksida (TCO2E) mengikut kategori tenaga"
 
+msgid "Energy Analysis"
+msgstr "Analisis Tenaga"
+
+msgid "Energy Saving Analysis"
+msgstr "Analisis Penjimatan Tenaga"
+
+msgid "Energy Plan Analysis"
+msgstr "Analisis Pelan Tenaga"
+
+
+
+msgid "Space Data - Energy Category Analysis"
+msgstr "Data Ruang - Analisis Klasifikasi Tenaga"
+
+
 msgid "Child Spaces Data"
 msgstr "Data Ruang Kanak-kanak"
 
@@ -135,8 +150,14 @@ msgstr "Tempoh Asas Kecekapan Kumulatif"
 msgid "Reporting Period Cumulative Efficiency"
 msgstr "Tempoh Pelaporan Kecekapan Kumulatif"
 
+msgid "Efficiency"
+msgstr "Kecekapan"
+
 msgid "Cumulative Efficiency"
 msgstr "Kecekapan Kumulatif"
+
+msgid "Income"
+msgstr "Pendapatan"
 
 msgid "Base Period Income"
 msgstr "Pendapatan Tempoh Asas"
@@ -192,8 +213,16 @@ msgstr "Output"
 msgid "Base Period Saving"
 msgstr "Penjimatan Tempoh Asas"
 
+msgid "Base Period Plan"
+msgstr "Pelan Tempoh Asas"
+
+
 msgid "Reporting Period Saving"
 msgstr "Penjimatan Tempoh Pelaporan"
+
+msgid "Reporting Period Plan"
+msgstr "Pelan Tempoh Pelaporan"
+
 
 msgid "Baseline"
 msgstr "Garis dasar"
@@ -203,6 +232,10 @@ msgstr "Sebenar"
 
 msgid "Saving"
 msgstr "Menyimpan"
+
+msgid "Plan"
+msgstr "Pelan"
+
 
 msgid "Decreased"
 msgstr "Menurun"
@@ -356,3 +389,178 @@ msgstr "Hari Bukan Bekerja"
 
 msgid "Working Days"
 msgstr "Hari Bekerja"
+
+msgid "Carbon Emissions"
+msgstr "Pelepasan Karbon"
+
+msgid "Costs"
+msgstr "Kos"
+
+msgid "Carbon"
+msgstr "Karbon"
+
+
+msgid "Energy Prediction Analysis"
+msgstr "Analisis Ramalan Tenaga"
+
+msgid "Space Comparison Analysis"
+msgstr "Analisis Perbandingan Ruang"
+
+msgid "Energy Item Analysis"
+msgstr "Analisis Item Tenaga"
+
+
+msgid "Energy Consumption Analysis"
+msgstr "Analisis Penggunaan Tenaga"
+
+msgid "Batch Analysis"
+msgstr "Analisis Kelompok"
+
+msgid "Equipment Comparison"
+msgstr "Perbandingan Peralatan"
+
+msgid "Equipment Tracking"
+msgstr "Penjejakan Peralatan"
+
+msgid "Equipment Data"
+msgstr "Data Peralatan"
+
+msgid "Energy Category Analysis"
+msgstr "Analisis Klasifikasi Tenaga"
+
+msgid "Meter Data"
+msgstr "Meter"
+
+msgid "Meter Energy"
+msgstr "Tenaga Meter"
+
+msgid "Meter Carbon"
+msgstr "Meter Emisi CO2"
+
+msgid "Meter Cost"
+msgstr "Kos Meter"
+
+msgid "Meter Trend"
+msgstr "Meter Trend"
+
+msgid "Meter Saving"
+msgstr "Penjimatan Meter"
+
+msgid "Meter Plan"
+msgstr "Pelan Meter"
+
+msgid "Meter Prediction"
+msgstr "Ramalan Meter"
+
+msgid "Prediction"
+msgstr "Ramalan"
+
+msgid "Reporting Period Prediction"
+msgstr "Ramalan Tempoh Pelaporan"
+
+msgid "Meter Submeters Balance"
+msgstr "Baki Submeter Meter Master"
+
+msgid "Meter Comparison"
+msgstr "Perbandingan Meter"
+
+msgid "Meter Tracking"
+msgstr "Penjejakan Meter"
+
+msgid "Power Quality Data"
+msgstr "Data Kualiti Kuasa"
+msgid "Power Quality Analysis"
+msgstr "Analisis Kualiti Kuasa"
+
+msgid "Point"
+msgstr "Titik"
+
+msgid "Category"
+msgstr "Kategori"
+
+msgid "Type"
+msgstr "Jenis"
+
+msgid "Limit"
+msgstr "Had"
+
+msgid "Normal Limit"
+msgstr "Had Normal"
+
+msgid "Severe Limit"
+msgstr "Had Serius"
+
+msgid "Compliance"
+msgstr "Pematuhan"
+
+msgid "Worst Deviation"
+msgstr "Sisihan Terburuk"
+
+msgid "Worst Time"
+msgstr "Masa Terburuk"
+
+msgid "Virtual Meter Energy"
+msgstr "Tenaga Meter Maya"
+
+msgid "Virtual Meter Carbon"
+msgstr "Emisi CO2 Meter Maya"
+
+msgid "Virtual Meter Cost"
+msgstr "Kos Meter Maya"
+
+msgid "Virtual Meter Batch Analysis"
+msgstr "Analisis kelompok meter maya"
+
+msgid "Virtual Meter Saving"
+msgstr "Penjimatan Meter Maya"
+
+msgid "Virtual Meter Plan"
+msgstr "Pelan Meter Maya"
+
+msgid "Virtual Meter Prediction"
+msgstr "Ramalan Meter Maya"
+
+msgid "Virtual Meter Comparison"
+msgstr "Perbandingan Meter Maya"
+
+msgid "Offline Meter Energy"
+msgstr "Tenaga Meter Luar Talian"
+
+msgid "Offline Meter Carbon"
+msgstr "Emisi Meter CO2 Offline"
+
+msgid "Offline Meter Cost"
+msgstr "Kos Meter Luar Talian"
+
+msgid "Offline Meter Batch Analysis"
+msgstr "Analisis Kelompok Meter Luar Talian"
+
+msgid "Offline Meter Saving"
+msgstr "Penjimatan Meter Luar Talian"
+
+msgid "Offline Meter Plan"
+msgstr "Pelan Meter Luar Talian"
+
+msgid "Combined Equipment"
+msgstr "Peralatan Gabungan"
+
+msgid "Tenant"
+msgstr "Penyewa"
+
+msgid "Tenant Data"
+msgstr "Data Penyewa"
+
+msgid "Tenant Bill"
+msgstr "Bil Penyewa"
+
+msgid "Tenant Comparison"
+msgstr "Perbandingan Penyewa"
+
+msgid "Store Data"
+msgstr "Data Kedai"
+
+msgid "Store Comparison"
+msgstr "Perbandingan Kedai"
+
+msgid "Store"
+msgstr "Kedai"

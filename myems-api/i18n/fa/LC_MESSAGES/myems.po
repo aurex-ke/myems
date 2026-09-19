@@ -78,6 +78,21 @@ msgstr "Ton of Standard Coal(TCE) by Energy Category"
 msgid "Ton of Carbon Dioxide Emissions(TCO2E) by Energy Category"
 msgstr "Ton of Carbon Dioxide Emissions(TCO2E) by Energy Category"
 
+msgid "Energy Analysis"
+msgstr "تحلیل انرژی"
+
+msgid "Energy Saving Analysis"
+msgstr "تحلیل صرفه‌جویی انرژی"
+
+msgid "Energy Plan Analysis"
+msgstr "تحلیل برنامه انرژی"
+
+
+
+msgid "Space Data - Energy Category Analysis"
+msgstr "داده‌های فضا - تحلیل دسته‌بندی انرژی"
+
+
 msgid "Child Spaces Data"
 msgstr "Child Spaces Data"
 
@@ -135,8 +150,14 @@ msgstr "Base Period Cumulative Efficiency"
 msgid "Reporting Period Cumulative Efficiency"
 msgstr "Reporting Period Cumulative Efficiency"
 
+msgid "Efficiency"
+msgstr "کارایی"
+
 msgid "Cumulative Efficiency"
 msgstr "Cumulative Efficiency"
+
+msgid "Income"
+msgstr "درآمد"
 
 msgid "Base Period Income"
 msgstr "Base Period Income"
@@ -192,8 +213,16 @@ msgstr "Output"
 msgid "Base Period Saving"
 msgstr "Base Period Saving"
 
+msgid "Base Period Plan"
+msgstr "برنامه دوره پایه"
+
+
 msgid "Reporting Period Saving"
 msgstr "Reporting Period Saving"
+
+msgid "Reporting Period Plan"
+msgstr "برنامه دوره گزارش"
+
 
 msgid "Baseline"
 msgstr "Baseline"
@@ -203,6 +232,10 @@ msgstr "Actual"
 
 msgid "Saving"
 msgstr "Saving"
+
+msgid "Plan"
+msgstr "برنامه"
+
 
 msgid "Decreased"
 msgstr "Decreased"
@@ -356,3 +389,178 @@ msgstr "Non Working Days"
 
 msgid "Working Days"
 msgstr "Working Days"
+
+msgid "Carbon Emissions"
+msgstr "انتشار کربن"
+
+msgid "Costs"
+msgstr "هزینه‌ها"
+
+msgid "Carbon"
+msgstr "تحليل انتشار کربن"
+
+
+msgid "Energy Prediction Analysis"
+msgstr "تحلیل پیش‌بینی انرژی"
+
+msgid "Space Comparison Analysis"
+msgstr "تحلیل مقایسه فضاها"
+
+msgid "Energy Item Analysis"
+msgstr "تحلیل آیتم‌های انرژی"
+
+
+msgid "Energy Consumption Analysis"
+msgstr "تحلیل مصرف انرژی"
+
+msgid "Batch Analysis"
+msgstr "تحلیل دسته‌ای"
+
+msgid "Equipment Comparison"
+msgstr "مقایسه تجهیزات"
+
+msgid "Equipment Tracking"
+msgstr "ردیابی تجهیزات"
+
+msgid "Equipment Data"
+msgstr "داده‌های تجهیزات"
+
+msgid "Energy Category Analysis"
+msgstr "تحلیل دسته‌بندی انرژی"
+
+msgid "Meter Data"
+msgstr "داده‌های کنتور"
+
+msgid "Meter Energy"
+msgstr "تحلیل انرژی کنتور"
+
+msgid "Meter Carbon"
+msgstr "تحلیل کربن کنتور"
+
+msgid "Meter Cost"
+msgstr "تحلیل هزینه کنتور"
+
+msgid "Meter Trend"
+msgstr "تحلیل روند کنتور"
+
+msgid "Meter Saving"
+msgstr "تحلیل صرفه‌جویی کنتور"
+
+msgid "Meter Plan"
+msgstr "تحلیل برنامه کنتور"
+
+msgid "Meter Prediction"
+msgstr "تحلیل پیش‌بینی کنتور"
+
+msgid "Prediction"
+msgstr "تحلیل پیش‌بینی"
+
+msgid "Reporting Period Prediction"
+msgstr "پیش‌بینی دوره گزارش"
+
+msgid "Meter Submeters Balance"
+msgstr "تحلیل تعادل کنتور اصلی-فرعی"
+
+msgid "Meter Comparison"
+msgstr "تحلیل مقایسه‌ای کنتور"
+
+msgid "Meter Tracking"
+msgstr "دفترچه کنتور"
+
+msgid "Power Quality Data"
+msgstr "داده‌های کیفیت توان"
+msgid "Power Quality Analysis"
+msgstr "تحلیل کیفیت توان"
+
+msgid "Point"
+msgstr "نقطه"
+
+msgid "Category"
+msgstr "دسته"
+
+msgid "Type"
+msgstr "نوع"
+
+msgid "Limit"
+msgstr "حد"
+
+msgid "Normal Limit"
+msgstr "حد عادی"
+
+msgid "Severe Limit"
+msgstr "حد شدید"
+
+msgid "Compliance"
+msgstr "انطباق"
+
+msgid "Worst Deviation"
+msgstr "بدترین انحراف"
+
+msgid "Worst Time"
+msgstr "زمان بدترین انحراف"
+
+msgid "Virtual Meter Energy"
+msgstr "تحلیل مصرف انرژی کنتور مجازی"
+
+msgid "Virtual Meter Carbon"
+msgstr "تحلیل کربن کنتور مجازی"
+
+msgid "Virtual Meter Cost"
+msgstr "تحلیل هزینه کنتور مجازی"
+
+msgid "Virtual Meter Batch Analysis"
+msgstr "تحلیل انبوه کنتور مجازی"
+
+msgid "Virtual Meter Saving"
+msgstr "تحلیل صرفه‌جویی کنتور مجازی"
+
+msgid "Virtual Meter Plan"
+msgstr "تحلیل برنامه کنتور مجازی"
+
+msgid "Virtual Meter Prediction"
+msgstr "تحلیل پیش‌بینی کنتور مجازی"
+
+msgid "Virtual Meter Comparison"
+msgstr "تحلیل مقایسه‌ای کنتور مجازی"
+
+msgid "Offline Meter Energy"
+msgstr "تحلیل انرژی کنتور آفلاین"
+
+msgid "Offline Meter Carbon"
+msgstr "تحلیل کربن کنتور آفلاین"
+
+msgid "Offline Meter Cost"
+msgstr "تحلیل هزینه کنتور آفلاین"
+
+msgid "Offline Meter Batch Analysis"
+msgstr "تحلیل دسته‌ای کنتورهای آفلاین"
+
+msgid "Offline Meter Saving"
+msgstr "صرفه‌جویی کنتورهای آفلاین"
+
+msgid "Offline Meter Plan"
+msgstr "برنامه کنتورهای آفلاین"
+
+msgid "Combined Equipment"
+msgstr "تجهیزات ترکیبی"
+
+msgid "Tenant"
+msgstr "مستأجر"
+
+msgid "Tenant Data"
+msgstr "داده‌های مستأجر"
+
+msgid "Tenant Bill"
+msgstr "صورت‌حساب مستأجر"
+
+msgid "Tenant Comparison"
+msgstr "مقایسه مستأجران"
+
+msgid "Store Data"
+msgstr "داده‌های فروشگاه"
+
+msgid "Store Comparison"
+msgstr "تحلیل مقایسه‌ای"
+
+msgid "Store"
+msgstr "فروشگاه"

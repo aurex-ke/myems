@@ -69,6 +69,7 @@ export default {
         'Space Production': '產量能耗分析',
         'Equipment Tracking': '設備台賬',
         'Equipment Comparison': '對比分析',
+        'Equipment Realtime Monitor': '設備即時監控',
         'Shopfloor Comparison': '對比分析',
         'Store Comparison': '對比分析',
         'Space Comparison': '對比分析',
@@ -116,6 +117,7 @@ export default {
         'Combined Equipments': '組合設備',
         'Energy Storage Power Station List': '電站列表',
         'Energy Storage Power Station Details': '設備監控',
+        'Trend in the last hour of Main Parameter': '最近一小時主參數趨勢',
         'Energy Storage Power Station Reporting': '數據報表',
         'Energy Storage Power Station Alarm': '故障報警',
         'Energy Storage Power Station Maintenance': '維護保養',
@@ -568,6 +570,7 @@ Please copy it to the input box below.':
         'Please wait for approval': '請等待審核',
         //notification
         Notifications: '通知',
+        'Notification': '通知',
         'Mark all as read': '全部設為已讀',
         'View all': '全部',
         'Notification New': '新的',
@@ -1435,6 +1438,7 @@ Please copy it to the input box below.':
         mean: '平均值',
         std: '標準差',
         p5: 'P5',
-        p95: 'P95'
+        p95: 'P95',
+        'Home': '首頁'
     }
 };

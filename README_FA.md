@@ -1,9 +1,9 @@
 <p align="center">
    <img alt="logo" src="https://myems.cn/img/myems.png" width="150" height="150">
 </p>
-<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">MyEMS v6.7.0</h1>
+<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">MyEMS v6.8.0</h1>
 <h3 align="center">سامانه مدیریت انرژی متن‌باز پیشرو در صنعت</h3>
-<h6 align="center">نزدیک به هزار نمونه پروژه</h6>
+<h6 align="center">بیش از هزار نمونه پروژه، دریافت گواهینامه آزمایش CMA</h6>
 <h6 align="center">تعهد به متن‌باز ماندن دائمی</h6>
 <h6 align="center">عضویت در گروه QQ و گروه WeChat، پشتیبانی فنی رایگان</h6>
 <h6 align="center">همواره در حال به‌روزرسانی، انتشار یک نسخه کوچک در هر ماه و یک نسخه بزرگ در هر سال</h6>
@@ -14,7 +14,7 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/b2cd6049727240e2aaeb8fc7b4086166)](https://app.codacy.com/gh/MyEMS/myems/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 
-[简体中文](./README_CN.md) | [English](./README_EN.md) | [Deutsch](./README_DE.md) | [Español](./README_ES.md) | [Français](./README_FR.md) | [Italiano](./README_IT.md) | [Nederlands](./README_NL.md) | [Polski](./README_PO.md) | [Português](./README_PT.md) | [Русский](./README_RU.md) | [日本語](./README_JP.md) | [한국어](./README_KR.md) | [繁體中文](./README_TW.md) | [العربية](./README_AR.md) | [فارسی](./README_FA.md) | [ไทย](./README_TH.md) | [हिन्दी](./README_HI.md) | [Bahasa Indonesia](./README_ID.md) | [Bahasa Melayu](./README_MS.md) | [Türkçe](./README_TR.md)
+[简体中文](./README_CN.md) | [English](./README.md) | [Deutsch](./README_DE.md) | [Español](./README_ES.md) | [Français](./README_FR.md) | [Italiano](./README_IT.md) | [Nederlands](./README_NL.md) | [Polski](./README_PO.md) | [Português](./README_PT.md) | [Русский](./README_RU.md) | [日本語](./README_JP.md) | [한국어](./README_KR.md) | [繁體中文](./README_TW.md) | [العربية](./README_AR.md) | [فارسی](./README_FA.md) | [ไทย](./README_TH.md) | [हिन्दी](./README_HI.md) | [Bahasa Indonesia](./README_ID.md) | [Bahasa Melayu](./README_MS.md) | [Türkçe](./README_TR.md) | [Tiếng Việt](./README_VI.md)
 ## معرفی MyEMS
 
 سیستم مدیریت انرژی متن‌باز MyEMS، با ارجاع به استاندارد سیستم مدیریت انرژی ISO 50001 (GB/T 23331-2020)، برای ساختمان‌ها، کارخانه‌ها، مراکز خرید، بیمارستان‌ها، پارک‌های صنعتی و مراکز مدیریت انرژی و کربن جهت جمع‌آوری، تحلیل و گزارش‌دهی مصرف انرژی و انتشار کربن برای حامل‌هایی نظیر برق، آب، گاز، سرمایش و گرمایش کاربرد دارد. همچنین قابلیت‌های اختیاری نسخه سازمانی شامل انرژی خورشیدی، ذخیره‌سازهای انرژی، ایستگاه‌های شارژ خودرو برقی، ریزشبکه‌ها، نیروگاه مجازی، کنترل تجهیزات، تشخیص عیب، مدیریت سفارش کار و بهینه‌سازی با هوش مصنوعی می‌باشد. این محصول توسط یک شرکت حرفه‌ای با سابقه توسعه و نگهداری می‌شود و پشتیبانی بلندمدت تضمین شده است. با متن‌باز، به توسعه کم‌کربن شرکت‌های بزرگ، پارک‌های صنعتی و اپراتورهای انرژی کمک کنید!
@@ -89,11 +89,11 @@
 
 ## قابلیت‌های نسخه انجمن MyEMS
 
-جهت مشاهده جزئیات به آدرس [https://myems.cn/docs/intro#myems-features](https://myems.cn/docs/intro#myems-features) مراجعه نمایید.
+جهت مشاهده جزئیات به آدرس [https://myems.cn/fa/docs/community](https://myems.cn/fa/docs/community) مراجعه نمایید.
 
 ## قابلیت‌های نسخه سازمانی MyEMS
 
-جهت مشاهده جزئیات به آدرس [https://myems.cn/docs/enterprise](https://myems.cn/docs/enterprise) مراجعه نمایید.
+جهت مشاهده جزئیات به آدرس [https://myems.cn/fa/docs/enterprise](https://myems.cn/fa/docs/enterprise) مراجعه نمایید.
 
 
 ## دانلود MyEMS (نسخه انجمن)
@@ -120,39 +120,39 @@
 
 ## نصب MyEMS (نسخه انجمن)
 
-جهت مشاهده جزئیات به آدرس [https://myems.cn/docs/category/installation](https://myems.cn/docs/category/installation) مراجعه نمایید.
+جهت مشاهده جزئیات به آدرس [https://myems.cn/fa/docs/category/installation](https://myems.cn/fa/docs/category/installation) مراجعه نمایید.
 
 ## اجزای تشکیل‌دهنده MyEMS
 
-### پایگاه داده MyEMS (SQL)
+### پایگاه داده MyEMS
 
 جهت مشاهده توضیحات به [database](./database/README.md) مراجعه نمایید
 
-### رابط برنامه‌نویسی کاربردی MyEMS (Python)
+### رابط برنامه‌نویسی کاربردی MyEMS
 
 جهت مشاهده توضیحات به [myems-api](./myems-api/README.md) مراجعه نمایید
 
-### رابط کاربری مدیریت MyEMS (AngularJS version 1.x)
+### رابط کاربری مدیریت MyEMS
 
 جهت مشاهده توضیحات به [myems-admin](myems-admin/README.md) مراجعه نمایید
 
-### سرویس جمع‌آوری داده Modbus TCP MyEMS (Python)
+### سرویس جمع‌آوری داده Modbus TCP MyEMS
 
 جهت مشاهده توضیحات به [myems-modbus-tcp](./myems-modbus-tcp/README.md) مراجعه نمایید
 
-### سرویس پالایش داده MyEMS (Python)
+### سرویس پالایش داده MyEMS
 
 جهت مشاهده توضیحات به [myems-cleaning](./myems-cleaning/README.md) مراجعه نمایید
 
-### سرویس نرمال‌سازی داده MyEMS (Python)
+### سرویس نرمال‌سازی داده MyEMS
 
 جهت مشاهده توضیحات به [myems-normalization](./myems-normalization/README.md) مراجعه نمایید
 
-### سرویس تجمیع داده MyEMS (Python)
+### سرویس تجمیع داده MyEMS
 
 جهت مشاهده توضیحات به [myems-aggregation](./myems-aggregation/README.md) مراجعه نمایید
 
-### رابط کاربری وب MyEMS (ReactJS)
+### رابط کاربری وب MyEMS
 
 جهت مشاهده توضیحات به [myems-web](myems-web/README.md) مراجعه نمایید
 
@@ -188,20 +188,19 @@
 - ایمیل: zny@myems.org
 
 | Platform | Description | QR Code |
-|----------|--------------|---------|
-| 微信 | 13011132526 | ![WeChat: 13011132526](./docs/images/qr_code_wechat.png) |
-| 飞书 | 13011132526 | ![Feishu: 13011132526](./docs/images/qr_code_feishu.png) |
-| 微信公众号 | سیستم مدیریت انرژی متن‌باز | ![سیستم مدیریت انرژی متن‌باز](./docs/images/qr_code_mp_weixin.png) |
-| 微信视频号 | سیستم مدیریت انرژی متن‌باز | ![سیستم مدیریت انرژی متن‌باز](./docs/images/qr_code_wechat_channels.png) |
-| 微信群 | گروه وی‌چت | ![گروه وی‌چت](./docs/images/qr_code_wechat_group.png) |
-| QQ群 | 792528967 | ![گروه QQ](./docs/images/qr_code_qq_group.png) |
-| 小红书 | Xiaohongshu | ![Xiaohongshju](./docs/images/qr_code_xiaohongshu.png) |
+|---------|--------------|---------|
+| 微信      | 13011132526 | ![WeChat: 13011132526](./docs/images/qr_code_wechat.png) |
+| 飞书      | 13011132526 | ![Feishu: 13011132526](./docs/images/qr_code_feishu.png) |
+| 微信公众号     | سیستم مدیریت انرژی متن‌باز | ![سیستم مدیریت انرژی متن‌باز](./docs/images/qr_code_mp_weixin.png) |
+| 微信视频号     | MyEMS سامانه مدیریت انرژی متن‌باز | ![MyEMS سامانه مدیریت انرژی متن‌باز](./docs/images/qr_code_wechat_channels.png) |
+| 微信群     | گروه وی‌چت | ![گروه وی‌چت](./docs/images/qr_code_wechat_group.png) |
+| QQ群     | 792528967 | ![QQ群](./docs/images/qr_code_qq_group.png) |
+| 小红书     | Xiaohongshu | ![Xiaohongshju](./docs/images/qr_code_xiaohongshu.png) |
 
 ## ویدیوها
 
- 
 
-## 🔖 پیوندهای دوستانه
+## 🔖 پیشنهادها
 
 - 👉 فرم‌های گردش‌کار کم‌کد Ccbpm: [https://gitee.com/opencc/ccflow](https://gitee.com/opencc/ccflow)
 - 👉 IoTGateway: درگاه اینترنت اشیا بین‌سکویی مبتنی بر .NET6 [https://gitee.com/iioter/iotgateway](https://gitee.com/iioter/iotgateway)

@@ -5,12 +5,42 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 ### Added
+- added docx exporters for space reports in myems-api and myems-web
+- added pdf exporters for equipment reports in myems-api and myems-web
+- added docx exporters for combined equipment reports in myems-api and myems-web
+- added is_enabled to meter, offline meter and virtual meter in myems-api and myems-admin
+- added pdf exporters for reports of meters, offline meters and virtual meters in myems-api and myems-web
+- added docx exporters for equipment reports in myems-api and myems-web
+- added is_enabled to combined equipment, equipment, shopfloor, store and tenant in myems-api and myems-admin
+- added pdf exporters for reports of tenants in myems-api and myems-web
+- added pdf exporters for stores reports in myems-api and myems-web
+### Changed
+- changed the tariff price precision from 6 decimal places to 8 decimal places
+### Fixed
+### Removed
+
+## [v6.8.0] - 2026-08-29
+### Added
 - added meter dashboard to myems-api and myems-web
+- added authenticate via API-KEY to webmessage in myems-api
+- added carbon emissions and costs to batch reports of combined equipment, equipment, shopfloor, store and tenant in myems-api and myems-web
+- added Equipment Realtime Monitor to myems-api and myems-web
+- added myems-bacnet to acquire data from BACnet devices (HVAC)
+- added myems-s7 to acquire data from S7 devices (PLC)
+- added split scroll to myems-admin
+- added pdf exporters for space reports in myems-api and myems-web
+- added docx exporter for space energy category report in myems-api and myems-web
 ### Changed
 - changed carbon unit to KGCO2E in myems-api
+- updated data source page in myems-admin
+- changed login page in myems-admin
+- changed carbon dioxide emission factor from fixed value to timeofuse values in database, myems-api, myems-admin and myems-aggregation
 ### Fixed
 - fixed issue of meter realtime report in myems-web
+- fixed issue of space energy item in myems-web
+- fixed issue of space tree in myems-api
 ### Removed
+- None
 
 ## [v6.7.0] - 2026-07-26
 ### Added
@@ -2350,7 +2380,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Removed
 -   None.
 
-[Unreleased]: https://gitee.com/MyEMS/myems/compare/v6.7.0...HEAD
+[Unreleased]: https://gitee.com/MyEMS/myems/compare/v6.8.0...HEAD
+[6.8.0]: https://gitee.com/MyEMS/myems/compare/v6.7.0...v6.8.0
 [6.7.0]: https://gitee.com/MyEMS/myems/compare/v6.6.0...v6.7.0
 [6.6.0]: https://gitee.com/MyEMS/myems/compare/v6.5.0...v6.6.0
 [6.5.0]: https://gitee.com/MyEMS/myems/compare/v6.4.0...v6.5.0

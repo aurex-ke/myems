@@ -78,6 +78,17 @@ msgstr "Ton of Standard Coal(TCE) by Energy Category"
 msgid "Ton of Carbon Dioxide Emissions(TCO2E) by Energy Category"
 msgstr "Ton of Carbon Dioxide Emissions(TCO2E) by Energy Category"
 
+msgid "Energy Analysis"
+msgstr "Analiza Energii"
+
+msgid "Energy Saving Analysis"
+msgstr "Analiza Oszczędności Energii"
+
+msgid "Energy Plan Analysis"
+msgstr "Analiza Planu Energetycznego"
+
+
+
 msgid "Child Spaces Data"
 msgstr "Child Spaces Data"
 
@@ -135,8 +146,14 @@ msgstr "Base Period Cumulative Efficiency"
 msgid "Reporting Period Cumulative Efficiency"
 msgstr "Reporting Period Cumulative Efficiency"
 
+msgid "Efficiency"
+msgstr "Efektywność"
+
 msgid "Cumulative Efficiency"
 msgstr "Cumulative Efficiency"
+
+msgid "Income"
+msgstr "Dochód"
 
 msgid "Base Period Income"
 msgstr "Base Period Income"
@@ -192,8 +209,16 @@ msgstr "Output"
 msgid "Base Period Saving"
 msgstr "Base Period Saving"
 
+msgid "Base Period Plan"
+msgstr "Plan Okresu Bazowego"
+
+
 msgid "Reporting Period Saving"
 msgstr "Reporting Period Saving"
+
+msgid "Reporting Period Plan"
+msgstr "Plan Okresu Raportowego"
+
 
 msgid "Baseline"
 msgstr "Baseline"
@@ -203,6 +228,10 @@ msgstr "Actual"
 
 msgid "Saving"
 msgstr "Saving"
+
+msgid "Plan"
+msgstr "Plan"
+
 
 msgid "Decreased"
 msgstr "Decreased"
@@ -356,3 +385,178 @@ msgstr "Non Working Days"
 
 msgid "Working Days"
 msgstr "Working Days"
+
+msgid "Carbon Emissions"
+msgstr "Emisje Węgla"
+
+msgid "Costs"
+msgstr "Koszty"
+
+msgid "Carbon"
+msgstr "Analiza emisji CO2"
+
+
+msgid "Energy Prediction Analysis"
+msgstr "Analiza prognozy energii"
+
+msgid "Space Comparison Analysis"
+msgstr "Analiza Porównania Przestrzeni"
+
+msgid "Energy Item Analysis"
+msgstr "Analiza Pozycji Energetycznych"
+
+
+msgid "Energy Consumption Analysis"
+msgstr "Analiza Zużycia Energii"
+
+msgid "Batch Analysis"
+msgstr "Analiza zbiorcza"
+
+msgid "Equipment Comparison"
+msgstr "Porównanie Wyposażenia"
+
+msgid "Equipment Tracking"
+msgstr "Śledzenie Wyposarzenia"
+
+msgid "Equipment Data"
+msgstr "Dane wyposażenia"
+
+msgid "Energy Category Analysis"
+msgstr "Analiza kategorii energii"
+
+msgid "Meter Data"
+msgstr "Dane liczników"
+
+msgid "Meter Energy"
+msgstr "Analiza zużycia energii przez liczniki"
+
+msgid "Meter Carbon"
+msgstr "Analiza emisji CO2 przez liczniki"
+
+msgid "Meter Cost"
+msgstr "Analiza kosztów liczników"
+
+msgid "Meter Trend"
+msgstr "Analiza trendów liczników"
+
+msgid "Meter Saving"
+msgstr "Analiza oszczędności energii przez liczniki"
+
+msgid "Meter Plan"
+msgstr "Analiza planistyczna liczników"
+
+msgid "Meter Prediction"
+msgstr "Prognoza licznika"
+
+msgid "Prediction"
+msgstr "Analiza predykcyjna"
+
+msgid "Reporting Period Prediction"
+msgstr "Prognoza w okresie raportowania"
+
+msgid "Meter Submeters Balance"
+msgstr "Analiza bilansu licznika głównego i podliczników"
+
+msgid "Meter Comparison"
+msgstr "Analiza porównawcza liczników"
+
+msgid "Meter Tracking"
+msgstr "Rejestr liczników"
+
+msgid "Power Quality Data"
+msgstr "Dane jakości energii"
+msgid "Power Quality Analysis"
+msgstr "Analiza jakości energii"
+
+msgid "Point"
+msgstr "Punkt"
+
+msgid "Category"
+msgstr "Kategoria"
+
+msgid "Type"
+msgstr "Typ"
+
+msgid "Limit"
+msgstr "Limit"
+
+msgid "Normal Limit"
+msgstr "Limit normalny"
+
+msgid "Severe Limit"
+msgstr "Limit poważny"
+
+msgid "Compliance"
+msgstr "Zgodność"
+
+msgid "Worst Deviation"
+msgstr "Najgorsze odchylenie"
+
+msgid "Worst Time"
+msgstr "Czas najgorszego odchylenia"
+
+msgid "Virtual Meter Energy"
+msgstr "Analiza zużycia energii przez liczniki wirtualne"
+
+msgid "Virtual Meter Carbon"
+msgstr "Analiza emisji CO2 przez liczniki wirtualne"
+
+msgid "Virtual Meter Cost"
+msgstr "Analiza kosztów liczników wirtualnych"
+
+msgid "Virtual Meter Batch Analysis"
+msgstr "Analiza zbiorcza liczników wirtualnych"
+
+msgid "Virtual Meter Saving"
+msgstr "Analiza oszczędności energii przez liczniki wirtualne"
+
+msgid "Virtual Meter Plan"
+msgstr "Analiza planistyczna liczników wirtualnych"
+
+msgid "Virtual Meter Prediction"
+msgstr "Prognoza wirtualnego licznika"
+
+msgid "Virtual Meter Comparison"
+msgstr "Analiza porównawcza liczników wirtualnych"
+
+msgid "Offline Meter Energy"
+msgstr "Analiza zużycia energii przez liczniki offline"
+
+msgid "Offline Meter Carbon"
+msgstr "Analiza emisji CO2 przez liczniki offline"
+
+msgid "Offline Meter Cost"
+msgstr "Analiza kosztów liczników offline"
+
+msgid "Offline Meter Batch Analysis"
+msgstr "Analiza wsadowa liczników offline"
+
+msgid "Offline Meter Saving"
+msgstr "Oszczędności liczników offline"
+
+msgid "Offline Meter Plan"
+msgstr "Plan liczników offline"
+
+msgid "Combined Equipment"
+msgstr "Urządzenie zespolone"
+
+msgid "Tenant"
+msgstr "Najemca"
+
+msgid "Tenant Data"
+msgstr "Dane najemców"
+
+msgid "Tenant Bill"
+msgstr "Rachunek najemcy"
+
+msgid "Tenant Comparison"
+msgstr "Porównanie najemców"
+
+msgid "Store Data"
+msgstr "Dane sklepów"
+
+msgid "Store Comparison"
+msgstr "Analiza porównawcza sklepów"
+
+msgid "Store"
+msgstr "Sklep"

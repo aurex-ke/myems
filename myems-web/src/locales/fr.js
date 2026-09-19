@@ -69,6 +69,7 @@ export default {
         'Space Production': 'Space Production',
         'Equipment Tracking': 'Suivi de l’équipement',
         'Equipment Comparison': 'Comparaison d’équipement',
+        'Equipment Realtime Monitor': 'Surveillance en temps réel des équipements',
         'Shopfloor Comparison': 'Comparaison d’équipement',
         'Store Comparison': 'Comparaison',
         'Space Comparison': 'Comparaison',
@@ -117,6 +118,7 @@ export default {
         'Combined Equipments': 'Combinés Équipements',
         'Energy Storage Power Station List': 'List',
         'Energy Storage Power Station Details': 'Details',
+        'Trend in the last hour of Main Parameter': 'Tendance de la dernière heure du paramètre principal',
         'Energy Storage Power Station Reporting': 'Reporting',
         'Energy Storage Power Station Alarm': 'Alarm',
         'Energy Storage Power Station Maintenance': 'Maintenance',
@@ -589,6 +591,7 @@ export default {
         'Please wait for approval': 'Veuillez attendre l’approbation',
         //notification
         Notifications: 'Notifications',
+        'Notification': 'Notification',
         'Mark all as read': 'Marquer tout comme lu',
         'View all': 'Tout',
         'Notification New': 'NOUVEAU',
@@ -1433,6 +1436,7 @@ export default {
         mean: 'Moyenne',
         std: 'Écart type',
         p5: 'P5',
-        p95: 'P95'
+        p95: 'P95',
+        'Home': 'Accueil'
     }
 };

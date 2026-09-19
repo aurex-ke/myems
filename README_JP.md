@@ -1,9 +1,9 @@
 <p align="center">
    <img alt="logo" src="https://myems.cn/img/myems.png" width="150" height="150">
 </p>
-<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">MyEMS v6.7.0</h1>
+<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">MyEMS v6.8.0</h1>
 <h3 align="center">業界をリードするオープンソースエネルギー管理システム</h3>
-<h6 align="center">約1000件のプロジェクト事例</h6>
+<h6 align="center">1000件以上のプロジェクト事例、CMA検出認証を受賞</h6>
 <h6 align="center">永久オープンソース化を約束</h6>
 <h6 align="center">QQグループとWeChatグループ内の技術サポートは無料</h6>
 <h6 align="center">継続的に更新、毎月1つのマイナーバージョン、毎年1つのメジャーバージョンをリリース</h6>
@@ -14,7 +14,7 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/b2cd6049727240e2aaeb8fc7b4086166)](https://app.codacy.com/gh/MyEMS/myems/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 
-[简体中文](./README_CN.md) | [English](./README_EN.md) | [Deutsch](./README_DE.md) | [Español](./README_ES.md) | [Français](./README_FR.md) | [Italiano](./README_IT.md) | [Nederlands](./README_NL.md) | [Polski](./README_PO.md) | [Português](./README_PT.md) | [Русский](./README_RU.md) | [日本語](./README_JP.md) | [한국어](./README_KR.md) | [繁體中文](./README_TW.md) | [العربية](./README_AR.md) | [فارسی](./README_FA.md) | [ไทย](./README_TH.md) | [हिन्दी](./README_HI.md) | [Bahasa Indonesia](./README_ID.md) | [Bahasa Melayu](./README_MS.md) | [Türkçe](./README_TR.md)
+[简体中文](./README_CN.md) | [English](./README.md) | [Deutsch](./README_DE.md) | [Español](./README_ES.md) | [Français](./README_FR.md) | [Italiano](./README_IT.md) | [Nederlands](./README_NL.md) | [Polski](./README_PO.md) | [Português](./README_PT.md) | [Русский](./README_RU.md) | [日本語](./README_JP.md) | [한국어](./README_KR.md) | [繁體中文](./README_TW.md) | [العربية](./README_AR.md) | [فارسی](./README_FA.md) | [ไทย](./README_TH.md) | [हिन्दी](./README_HI.md) | [Bahasa Indonesia](./README_ID.md) | [Bahasa Melayu](./README_MS.md) | [Türkçe](./README_TR.md) | [Tiếng Việt](./README_VI.md)
 ## MyEMS 紹介
 
 MyEMSオープンソースエネルギー管理システムは、ISO 50001エネルギー管理システム規格（GB/T 23331-2020）を参考にしており、建築物、工場、商業施設、病院、団地、エネルギー・カーボンマネジメントセンターにおける電力、水、ガス、冷熱、熱などのエネルギーと炭素排出量の収集、分析、レポート作成に適しています。また、太陽光発電、蓄電池、充電スタンド、マイクログリッド、バーチャルパワープラント、設備制御、故障診断、作業指示書管理、人工知能による最適化などのエンタープライズ版オプション機能もあります。ベテランの専門会社が開発・保守を行い、長期的なサポートを保証します。オープンソースで、企業グループ、産業団地、エネルギー事業者の低炭素発展を支援します！
@@ -89,11 +89,11 @@ MyEMSオープンソースエネルギー管理システムは、ISO 50001エネ
 
 ## MyEMSコミュニティ版機能
 
-詳細は [https://myems.cn/docs/intro#myems-features](https://myems.cn/docs/intro#myems-features) をご覧ください
+詳細は [https://myems.cn/ja/docs/community](https://myems.cn/ja/docs/community) をご覧ください
 
 ## MyEMSエンタープライズ版機能
 
-詳細は [https://myems.cn/docs/enterprise](https://myems.cn/docs/enterprise) をご覧ください
+詳細は [https://myems.cn/ja/docs/enterprise](https://myems.cn/ja/docs/enterprise) をご覧ください
 
 
 ## MyEMSダウンロード(コミュニティ版)
@@ -120,39 +120,39 @@ MyEMSオープンソースエネルギー管理システムは、ISO 50001エネ
 
 ## MyEMSインストール(コミュニティ版)
 
-詳細は [https://myems.cn/docs/category/installation](https://myems.cn/docs/category/installation) をご覧ください
+詳細は [https://myems.cn/ja/docs/category/installation](https://myems.cn/ja/docs/category/installation) をご覧ください
 
 ## MyEMSコンポーネント構成
 
-### MyEMS データベース (SQL)
+### MyEMS データベース
 
 詳細は [database](./database/README.md) をご覧ください
 
-### MyEMS API アプリケーションインターフェース (Python)
+### MyEMS API アプリケーションインターフェース
 
 詳細は [myems-api](./myems-api/README.md) をご覧ください
 
-### MyEMS 管理 UI (AngularJS version 1.x)
+### MyEMS 管理 UI
 
 詳細は [myems-admin](myems-admin/README.md) をご覧ください
 
-### MyEMS Modbus TCP データ収集サービス (Python)
+### MyEMS Modbus TCP データ収集サービス
 
 詳細は [myems-modbus-tcp](./myems-modbus-tcp/README.md) をご覧ください
 
-### MyEMS データクリーニングサービス (Python)
+### MyEMS データクリーニングサービス
 
 詳細は [myems-cleaning](./myems-cleaning/README.md) をご覧ください
 
-### MyEMS データ正規化サービス (Python)
+### MyEMS データ正規化サービス
 
 詳細は [myems-normalization](./myems-normalization/README.md) をご覧ください
 
-### MyEMS データ集計サービス (Python)
+### MyEMS データ集計サービス
 
 詳細は [myems-aggregation](./myems-aggregation/README.md) をご覧ください
 
-### MyEMS Web UI (ReactJS)
+### MyEMS Web UI
 
 詳細は [myems-web](myems-web/README.md) をご覧ください
 
@@ -186,28 +186,21 @@ Web UI:
 - 担当者: 張能遠
 - 電話/WeChat: (+86) 13011132526
 - Email: zny@myems.org
-- LINE ID: myems
-- WhatsApp: https://wa.me/message/6HB55A46RVAJP1
 
 | Platform | Description | QR Code |
-|----------|--------------|---------|
-| WeChat | 13011132526 | ![WeChat: 13011132526](./docs/images/qr_code_wechat.png) |
-| Line | MyEMS | ![Line: MyEMS](./docs/images/qr_code_line.png) |
-| WhatsApp | MyEMS | ![WhatsAPP: MyEMS](./docs/images/qr_code_whatsapp.png) |
-| Feishu | 13011132526 | ![Feishu: 13011132526](./docs/images/qr_code_feishu.png) |
-| 公式WeChatアカウント | オープンソースエネルギー管理システム | ![オープンソースエネルギー管理システム](./docs/images/qr_code_mp_weixin.png) |
-| 微信チャンネル | オープンソースエネルギー管理システム | ![オープンソースエネルギー管理システム](./docs/images/qr_code_wechat_channels.png) |
-| WeChatグループ | WeChatグループ | ![WeChatグループ](./docs/images/qr_code_wechat_group.png) |
-| QQグループ | 792528967 | ![QQグループ](./docs/images/qr_code_qq_group.png) |
-| 小紅書 | 小紅書 | ![Xiaohongshju](./docs/images/qr_code_xiaohongshu.png) |
+|---------|--------------|---------|
+| 微信      | 13011132526 | ![WeChat: 13011132526](./docs/images/qr_code_wechat.png) |
+| 飞书      | 13011132526 | ![Feishu: 13011132526](./docs/images/qr_code_feishu.png) |
+| 微信公众号     | オープンソースエネルギー管理システム | ![オープンソースエネルギー管理システム](./docs/images/qr_code_mp_weixin.png) |
+| 微信视频号     | MyEMSオープンソースエネルギー管理システム | ![MyEMSオープンソースエネルギー管理システム](./docs/images/qr_code_wechat_channels.png) |
+| 微信群     | WeChatグループ | ![WeChatグループ](./docs/images/qr_code_wechat_group.png) |
+| QQ群     | 792528967 | ![QQ群](./docs/images/qr_code_qq_group.png) |
+| 小红书     | 小紅書 | ![Xiaohongshju](./docs/images/qr_code_xiaohongshu.png) |
 
 ## 動画
 
-[BiliBili](https://space.bilibili.com/539108162)
 
-[YouTube](https://www.youtube.com/@myems)
-
-## 🔖 フレンドリーリンク
+## 🔖 おすすめ
 
 - 👉 馳騁BPM低コードワークフローフォーム： [https://gitee.com/opencc/ccflow](https://gitee.com/opencc/ccflow)
 - 👉 IoTGateway:.NET6ベースのクロスプラットフォームIoTゲートウェイ [https://gitee.com/iioter/iotgateway](https://gitee.com/iioter/iotgateway)

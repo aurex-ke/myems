@@ -48,6 +48,7 @@ CREATE TABLE IF NOT EXISTS `myems_system_db`.`tbl_combined_equipments` (
   `uuid` CHAR(36) NOT NULL,
   `is_input_counted` BOOL NOT NULL,
   `is_output_counted` BOOL NOT NULL,
+  `is_enabled` BOOL NOT NULL DEFAULT 1,
   `cost_center_id` BIGINT NOT NULL,
   `efficiency_indicator` DECIMAL(21, 6) DEFAULT 0.000000 NOT NULL,
   `svg_id` BIGINT,
@@ -739,6 +740,7 @@ CREATE TABLE IF NOT EXISTS `myems_system_db`.`tbl_equipments` (
   `uuid` CHAR(36) NOT NULL,
   `is_input_counted` BOOL NOT NULL,
   `is_output_counted` BOOL NOT NULL,
+  `is_enabled` BOOL NOT NULL DEFAULT 1,
   `cost_center_id` BIGINT NOT NULL,
   `efficiency_indicator` DECIMAL(21, 6) DEFAULT 0.000000 NOT NULL,
   `svg_id` BIGINT,
@@ -979,6 +981,7 @@ VALUES
 (214,'Equipment Comparison','/equipment/comparison',200,0),
 (215,'Prediction','/equipment/prediction',200,1),
 (216, 'Dashboard','/equipment',200,0),
+(217,'Equipment Realtime Monitor','/equipment/realtimemonitor',200,0),
 (300,'Meter Data','/meter',NULL,0),
 (301,'Meter Energy','/meter/meterenergy',300,0),
 (302,'Meter Cost','/meter/metercost',300,0),
@@ -1009,7 +1012,7 @@ VALUES
 (327,'Meter Prediction','/meter/meterprediction',300,1),
 (328,'Virtual Meter Prediction','/meter/virtualmeterprediction',300,1),
 (329,'Offline Meter Prediction','/meter/offlinemeterprediction',300,1),
-(330,'Dashboard','/meter',300,0)
+(330,'Dashboard','/meter',300,0),
 (400,'Tenant Data','/tenant',NULL,0),
 (401,'Energy Category Data','/tenant/energycategory',400,0),
 (402,'Energy Item Data','/tenant/energyitem',400,0),
@@ -1082,6 +1085,7 @@ CREATE TABLE IF NOT EXISTS `myems_system_db`.`tbl_meters` (
   `uuid` CHAR(36) NOT NULL,
   `energy_category_id` BIGINT NOT NULL,
   `is_counted` BOOL NOT NULL,
+  `is_enabled` BOOL NOT NULL DEFAULT 1,
   `hourly_low_limit` DECIMAL(21, 6) NOT NULL
   COMMENT 'Inclusive. The default is 0. If the meter has accuracy problems, set the value to a small positive value, such as 0.100',
   `hourly_high_limit` DECIMAL(21, 6) NOT NULL
@@ -1468,6 +1472,7 @@ CREATE TABLE IF NOT EXISTS `myems_system_db`.`tbl_offline_meters` (
   `uuid` CHAR(36) NOT NULL,
   `energy_category_id` BIGINT NOT NULL,
   `is_counted` BOOL NOT NULL,
+  `is_enabled` BOOL NOT NULL DEFAULT 1,
   `hourly_low_limit` DECIMAL(21, 6)  NOT NULL COMMENT 'Inclusive. Default is 0.',
   `hourly_high_limit` DECIMAL(21, 6)  NOT NULL COMMENT 'Inclusive. Maximum energy consumption per hour.',
   `cost_center_id` BIGINT NOT NULL,
@@ -1897,6 +1902,7 @@ CREATE TABLE IF NOT EXISTS `myems_system_db`.`tbl_shopfloors` (
   `uuid` CHAR(36) NOT NULL,
   `area` DECIMAL(21, 6) NOT NULL,
   `is_input_counted` BOOL NOT NULL,
+  `is_enabled` BOOL NOT NULL DEFAULT 1,
   `contact_id` BIGINT,
   `cost_center_id` BIGINT,
   `description` VARCHAR(255),
@@ -2301,10 +2307,56 @@ CREATE TABLE IF NOT EXISTS `myems_system_db`.`tbl_tariffs_timeofuses` (
   `end_time_of_day` TIME NOT NULL,
   `peak_type` VARCHAR(8) NOT NULL
   COMMENT 'Peak Type: \ntoppeak - Top-Peak尖\nonpeak - On-Peak峰\nmidpeak - Mid-Peak平\noffpeak - Off-Peak谷\ndeep - Deep-Valley深谷',
-  `price` DECIMAL(21, 6) NOT NULL,
+  `price` DECIMAL(23, 8) NOT NULL,
   PRIMARY KEY (`id`));
 CREATE INDEX `tbl_tariffs_timeofuses_index_1`
 ON `myems_system_db`.`tbl_tariffs_timeofuses` (`tariff_id`, `start_time_of_day`);
+
+-- ---------------------------------------------------------------------------------------------------------------------
+-- Table `myems_system_db`.`tbl_emission_factors`
+-- ---------------------------------------------------------------------------------------------------------------------
+DROP TABLE IF EXISTS `myems_system_db`.`tbl_emission_factors` ;
+
+CREATE TABLE IF NOT EXISTS `myems_system_db`.`tbl_emission_factors` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(128) NOT NULL,
+  `uuid` CHAR(36) NOT NULL,
+  `energy_category_id` BIGINT NOT NULL,
+  `unit_of_factor` VARCHAR(45) NOT NULL COMMENT 'Unit of Factor, e.g. kgCO2/kWh',
+  `valid_from_datetime_utc` DATETIME NOT NULL,
+  `valid_through_datetime_utc` DATETIME NOT NULL,
+  PRIMARY KEY (`id`));
+CREATE INDEX `tbl_emission_factors_index_1` ON `myems_system_db`.`tbl_emission_factors` (`name`);
+CREATE INDEX `tbl_emission_factors_index_2`
+ON `myems_system_db`.`tbl_emission_factors` (`energy_category_id`, `valid_from_datetime_utc`, `valid_through_datetime_utc`);
+
+-- ---------------------------------------------------------------------------------------------------------------------
+-- Table `myems_system_db`.`tbl_emission_factors_timeofuses`
+-- ---------------------------------------------------------------------------------------------------------------------
+DROP TABLE IF EXISTS `myems_system_db`.`tbl_emission_factors_timeofuses` ;
+
+CREATE TABLE IF NOT EXISTS `myems_system_db`.`tbl_emission_factors_timeofuses` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT,
+  `emission_factor_id` BIGINT NOT NULL,
+  `start_time_of_day` TIME NOT NULL,
+  `end_time_of_day` TIME NOT NULL,
+  `factor` DECIMAL(21, 6) NOT NULL COMMENT 'CO2 emission factor in this time period, e.g. kgCO2/kWh',
+  PRIMARY KEY (`id`));
+CREATE INDEX `tbl_emission_factors_timeofuses_index_1`
+ON `myems_system_db`.`tbl_emission_factors_timeofuses` (`emission_factor_id`, `start_time_of_day`);
+
+-- ---------------------------------------------------------------------------------------------------------------------
+-- Table `myems_system_db`.`tbl_cost_centers_emission_factors`
+-- ---------------------------------------------------------------------------------------------------------------------
+DROP TABLE IF EXISTS `myems_system_db`.`tbl_cost_centers_emission_factors` ;
+
+CREATE TABLE IF NOT EXISTS `myems_system_db`.`tbl_cost_centers_emission_factors` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT,
+  `cost_center_id` BIGINT NOT NULL,
+  `emission_factor_id` BIGINT NOT NULL,
+  PRIMARY KEY (`id`));
+CREATE INDEX `tbl_cost_centers_emission_factors_index_1`
+ON `myems_system_db`.`tbl_cost_centers_emission_factors` (`cost_center_id`);
 
 -- ---------------------------------------------------------------------------------------------------------------------
 -- Table `myems_system_db`.`tbl_stores`
@@ -2321,6 +2373,7 @@ CREATE TABLE IF NOT EXISTS `myems_system_db`.`tbl_stores` (
   `area` DECIMAL(21, 6) NOT NULL,
   `store_type_id` BIGINT NOT NULL,
   `is_input_counted` BOOL NOT NULL,
+  `is_enabled` BOOL NOT NULL DEFAULT 1,
   `contact_id` BIGINT NOT NULL,
   `cost_center_id` BIGINT NOT NULL,
   `description` VARCHAR(255),
@@ -2455,6 +2508,7 @@ CREATE TABLE IF NOT EXISTS `myems_system_db`.`tbl_tenants` (
   `area` DECIMAL(21, 6) NOT NULL,
   `tenant_type_id` BIGINT NOT NULL,
   `is_input_counted` BOOL NOT NULL,
+  `is_enabled` BOOL NOT NULL DEFAULT 1,
   `is_key_tenant` BOOL NOT NULL,
   `lease_number` VARCHAR(255) NOT NULL,
   `lease_start_datetime_utc` DATETIME NOT NULL,
@@ -2688,6 +2742,7 @@ CREATE TABLE IF NOT EXISTS `myems_system_db`.`tbl_virtual_meters` (
   `equation` LONGTEXT NOT NULL,
   `energy_category_id` BIGINT NOT NULL,
   `is_counted` BOOL NOT NULL,
+  `is_enabled` BOOL NOT NULL DEFAULT 1,
   `cost_center_id` BIGINT NOT NULL,
   `energy_item_id` BIGINT,
   `description` VARCHAR(255),
@@ -2758,7 +2813,7 @@ CREATE TABLE IF NOT EXISTS `myems_system_db`.`tbl_versions` (
 INSERT INTO `myems_system_db`.`tbl_versions`
 (`id`, `version`, `release_date`)
 VALUES
-(1, '6.8.0RC', '2026-08-26');
+(1, '6.9.0RC', '2026-09-26');
 
 -- ---------------------------------------------------------------------------------------------------------------------
 -- Table `myems_system_db`.`tbl_wind_farms`

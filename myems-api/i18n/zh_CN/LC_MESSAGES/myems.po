@@ -78,6 +78,21 @@ msgstr "吨标准煤(TCE)占比"
 msgid "Ton of Carbon Dioxide Emissions(TCO2E) by Energy Category"
 msgstr "吨二氧化碳排放(TCO2E)占比"
 
+msgid "Energy Analysis"
+msgstr "能耗分析"
+
+msgid "Energy Saving Analysis"
+msgstr "节能分析"
+
+msgid "Energy Plan Analysis"
+msgstr "计划分析"
+
+
+
+msgid "Space Data - Energy Category Analysis"
+msgstr "空间数据-能耗分类分析"
+
+
 msgid "Child Spaces Data"
 msgstr "子空间数据"
 
@@ -135,8 +150,14 @@ msgstr "基准期累积效率"
 msgid "Reporting Period Cumulative Efficiency"
 msgstr "报告期累积效率"
 
+msgid "Efficiency"
+msgstr "效率分析"
+
 msgid "Cumulative Efficiency"
 msgstr "累积效率"
+
+msgid "Income"
+msgstr "收入分析"
 
 msgid "Base Period Income"
 msgstr "基准期收入"
@@ -154,7 +175,7 @@ msgid "Proportion"
 msgstr "占比"
 
 msgid "Load"
-msgstr "负荷"
+msgstr "负荷分析"
 
 msgid "Base Period Average Load"
 msgstr "基准期平均负荷"
@@ -187,13 +208,21 @@ msgid "Reporting Period Output"
 msgstr "报告期产出"
 
 msgid "Output"
-msgstr "产出"
+msgstr "产出分析"
 
 msgid "Base Period Saving"
 msgstr "基准期节约"
 
+msgid "Base Period Plan"
+msgstr "基准期计划"
+
+
 msgid "Reporting Period Saving"
 msgstr "报告期节约"
+
+msgid "Reporting Period Plan"
+msgstr "报告期计划"
+
 
 msgid "Baseline"
 msgstr "基线"
@@ -203,6 +232,10 @@ msgstr "实际"
 
 msgid "Saving"
 msgstr "节约"
+
+msgid "Plan"
+msgstr "计划"
+
 
 msgid "Decreased"
 msgstr "减少"
@@ -356,3 +389,179 @@ msgstr "非工作日"
 
 msgid "Working Days"
 msgstr "工作日"
+
+msgid "Carbon Emissions"
+msgstr "碳排放"
+
+msgid "Costs"
+msgstr "成本"
+
+msgid "Carbon"
+msgstr "碳排放分析"
+
+
+msgid "Energy Prediction Analysis"
+msgstr "预测分析"
+
+msgid "Space Comparison Analysis"
+msgstr "空间对比分析"
+
+msgid "Energy Item Analysis"
+msgstr "能耗分项分析"
+
+
+msgid "Energy Consumption Analysis"
+msgstr "消耗分析"
+
+msgid "Batch Analysis"
+msgstr "批量分析"
+
+msgid "Equipment Comparison"
+msgstr "对比分析"
+
+msgid "Equipment Tracking"
+msgstr "设备台账"
+
+msgid "Equipment Data"
+msgstr "设备数据"
+
+msgid "Energy Category Analysis"
+msgstr "能耗分类分析"
+
+msgid "Meter Data"
+msgstr "计量表数据"
+
+msgid "Meter Energy"
+msgstr "计量表能耗分析"
+
+msgid "Meter Carbon"
+msgstr "计量表碳排放分析"
+
+msgid "Meter Cost"
+msgstr "计量表成本分析"
+
+msgid "Meter Trend"
+msgstr "计量表趋势分析"
+
+msgid "Meter Saving"
+msgstr "计量表节能分析"
+
+msgid "Meter Plan"
+msgstr "计量表计划分析"
+
+msgid "Meter Prediction"
+msgstr "计量表预测分析"
+
+msgid "Prediction"
+msgstr "预测分析"
+
+msgid "Reporting Period Prediction"
+msgstr "报告期预测"
+
+msgid "Meter Submeters Balance"
+msgstr "总分表平衡分析"
+
+msgid "Meter Comparison"
+msgstr "计量表对比分析"
+
+msgid "Meter Tracking"
+msgstr "计量表台账"
+
+msgid "Power Quality Data"
+msgstr "电能质量数据"
+msgid "Power Quality Analysis"
+msgstr "电能质量分析"
+
+msgid "Point"
+msgstr "点位"
+
+msgid "Category"
+msgstr "类别"
+
+msgid "Type"
+msgstr "类型"
+
+msgid "Limit"
+msgstr "限值"
+
+msgid "Normal Limit"
+msgstr "正常限值"
+
+msgid "Severe Limit"
+msgstr "严重限值"
+
+msgid "Compliance"
+msgstr "合格率"
+
+msgid "Worst Deviation"
+msgstr "最差偏差"
+
+msgid "Worst Time"
+msgstr "最差发生时间"
+
+msgid "Virtual Meter Energy"
+msgstr "虚拟表能耗分析"
+
+msgid "Virtual Meter Carbon"
+msgstr "虚拟表碳排放分析"
+
+msgid "Virtual Meter Cost"
+msgstr "虚拟表成本分析"
+
+msgid "Virtual Meter Batch Analysis"
+msgstr "虚拟表批量分析"
+
+msgid "Virtual Meter Saving"
+msgstr "虚拟表节能分析"
+
+msgid "Virtual Meter Plan"
+msgstr "虚拟表计划分析"
+
+msgid "Virtual Meter Prediction"
+msgstr "虚拟表预测分析"
+
+msgid "Virtual Meter Comparison"
+msgstr "虚拟表对比分析"
+
+msgid "Offline Meter Energy"
+msgstr "离线表能耗分析"
+
+msgid "Offline Meter Carbon"
+msgstr "离线表碳排放分析"
+
+msgid "Offline Meter Cost"
+msgstr "离线表成本分析"
+
+msgid "Offline Meter Batch Analysis"
+msgstr "离线表批量分析"
+
+msgid "Offline Meter Saving"
+msgstr "离线表节能分析"
+
+msgid "Offline Meter Plan"
+msgstr "离线表计划分析"
+
+
+msgid "Combined Equipment"
+msgstr "组合设备"
+
+msgid "Tenant"
+msgstr "租户"
+
+msgid "Tenant Data"
+msgstr "租户数据"
+
+msgid "Tenant Bill"
+msgstr "租户账单"
+
+msgid "Tenant Comparison"
+msgstr "对比分析"
+
+msgid "Store Data"
+msgstr "门店数据"
+
+msgid "Store Comparison"
+msgstr "对比分析"
+
+msgid "Store"
+msgstr "门店"

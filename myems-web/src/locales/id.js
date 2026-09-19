@@ -69,6 +69,7 @@ export default {
         'Space Production': 'Space Production',
         'Equipment Tracking': 'Buku Peralatan',
         'Equipment Comparison': 'Perbandingan Peralatan',
+        'Equipment Realtime Monitor': 'Pemantauan Perangkat Real-time',
         'Shopfloor Comparison': 'Perbandingan Peralatan',
         'Store Comparison': 'Perbandingan Peralatan',
         'Space Comparison': 'Perbandingan Peralatan',
@@ -117,6 +118,7 @@ export default {
         'Combined Equipments': 'Peralatan Kombinasi',
         'Energy Storage Power Station List': 'List',
         'Energy Storage Power Station Details': 'Details',
+        'Trend in the last hour of Main Parameter': 'Tren dalam satu jam terakhir dari Parameter Utama',
         'Energy Storage Power Station Reporting': 'Reporting',
         'Energy Storage Power Station Alarm': 'Alarm',
         'Energy Storage Power Station Maintenance': 'Maintenance',
@@ -591,6 +593,7 @@ export default {
         'Please wait for approval': 'Silakan Tunggu Ulang',
         //notification
         Notifications: 'Notis',
+        'Notification': 'Notifikasi',
         'Mark all as read': 'Set Semua Sebagai Baca',
         'View all': 'Seluruh',
         'Notification New': 'BaruNew',
@@ -1444,6 +1447,7 @@ export default {
         mean: 'Rata-rata',
         std: 'Simpangan baku',
         p5: 'P5',
-        p95: 'P95'
+        p95: 'P95',
+        'Home': 'Beranda'
     }
 };

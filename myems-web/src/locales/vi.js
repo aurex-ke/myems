@@ -69,6 +69,7 @@ export default {
         'Space Production': 'Space Production',
         'Equipment Tracking': 'Theo dõi thiết bị',
         'Equipment Comparison': 'So sánh thiết bị',
+        'Equipment Realtime Monitor': 'Giám sát thiết bị thời gian thực',
         'Shopfloor Comparison': 'So sánh thiết bị',
         'Store Comparison': 'So sánh thiết bị',
         'Space Comparison': 'So sánh thiết bị',
@@ -117,6 +118,7 @@ export default {
         'Combined Equipments': 'Thiết bị kết hợp',
         'Energy Storage Power Station List': 'List',
         'Energy Storage Power Station Details': 'Details',
+        'Trend in the last hour of Main Parameter': 'Xu hướng trong một giờ qua của Tham số chính',
         'Energy Storage Power Station Reporting': 'Reporting',
         'Energy Storage Power Station Alarm': 'Alarm',
         'Energy Storage Power Station Maintenance': 'Maintenance',
@@ -584,6 +586,7 @@ export default {
         'Please wait for approval': 'Vui lòng chờ phê duyệt',
         //notification
         Notifications: 'Thông báo',
+        'Notification': 'Thông báo',
         'Mark all as read': 'Đánh dấu tất cả là đã đọc',
         'View all': 'Tất cả',
         'Notification New': 'MỚI',
@@ -1426,6 +1429,7 @@ liên kết tài khoản đăng ký không hợp lệ. Vui lòng thử lại.',
         mean: 'เฉลี่ย',
         std: 'ส่วนเบี่ยงเบนมาตรฐาน',
         p5: 'P5',
-        p95: 'P95'
+        p95: 'P95',
+        'Home': 'Trang chủ'
     }
 };

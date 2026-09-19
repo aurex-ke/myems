@@ -13,7 +13,11 @@ import {
   Input,
   Label,
   CustomInput,
-  Spinner
+  Spinner,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
 } from 'reactstrap';
 import CountUp from 'react-countup';
 import moment from 'moment';
@@ -25,7 +29,6 @@ import { getCookieValue, createCookie, checkEmpty, handleAPIError } from '../../
 import withRedirect from '../../../hoc/withRedirect';
 import { withTranslation } from 'react-i18next';
 import { toast } from 'react-toastify';
-import ButtonIcon from '../../common/ButtonIcon';
 import DeepSeekAnalysisModal from '../common/DeepSeekAnalysisModal';
 import { APIBaseURL, settings } from '../../../config';
 import { periodTypeOptions } from '../common/PeriodTypeOptions';
@@ -141,6 +144,11 @@ const EquipmentOutput = ({ setRedirect, setRedirectUrl, t }) => {
     { dataField: 'startdatetime', text: t('Datetime'), sort: true }
   ]);
   const [excelBytesBase64, setExcelBytesBase64] = useState(undefined);
+  const [pdfBytesBase64, setPdfBytesBase64] = useState(undefined);
+  const [docxBytesBase64, setDocxBytesBase64] = useState(undefined);
+  const [exportExcel, setExportExcel] = useState(false);
+  const [exportPdf, setExportPdf] = useState(false);
+  const [exportDocx, setExportDocx] = useState(false);
 
   useEffect(() => {
     let isResponseOK = false;
@@ -434,6 +442,8 @@ const EquipmentOutput = ({ setRedirect, setRedirectUrl, t }) => {
 
     // Reinitialize tables
     setDetailedDataTableData([]);
+    setPdfBytesBase64(undefined);
+    setDocxBytesBase64(undefined);
 
     let isResponseOK = false;
     fetch(
@@ -452,7 +462,13 @@ const EquipmentOutput = ({ setRedirect, setRedirectUrl, t }) => {
         '&reportingperiodenddatetime=' +
         moment(reportingPeriodDateRange[1]).format('YYYY-MM-DDTHH:mm:ss') +
         '&language=' +
-        language,
+        language +
+        '&exportexcel=' +
+        exportExcel +
+        '&exportpdf=' +
+        exportPdf +
+        '&exportdocx=' +
+        exportDocx,
       {
         method: 'GET',
         headers: {
@@ -721,13 +737,15 @@ const EquipmentOutput = ({ setRedirect, setRedirectUrl, t }) => {
           }
 
           setExcelBytesBase64(json['excel_bytes_base64']);
+          setPdfBytesBase64(json['pdf_bytes_base64']);
+          setDocxBytesBase64(json['docx_bytes_base64']);
 
           // enable submit button
           setSubmitButtonDisabled(false);
           // hide spinner
           setSpinnerHidden(true);
           // show export button
-          setExportButtonHidden(false);
+          setExportButtonHidden(!(json['excel_bytes_base64'] || json['pdf_bytes_base64'] || json['docx_bytes_base64']));
           // show result data
           setResultDataHidden(false);
         } else {
@@ -739,21 +757,57 @@ const EquipmentOutput = ({ setRedirect, setRedirectUrl, t }) => {
       });
   };
 
-  const handleExport = e => {
+  const handleExport = (e, type) => {
     e.preventDefault();
-    const mimeType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
-    const fileName = 'equipmentoutput.xlsx';
-    var fileUrl = 'data:' + mimeType + ';base64,' + excelBytesBase64;
-    fetch(fileUrl)
-      .then(response => response.blob())
-      .then(blob => {
-        var link = window.document.createElement('a');
-        link.href = window.URL.createObjectURL(blob, { type: mimeType });
-        link.download = fileName;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      });
+    if (type === 'excel' && excelBytesBase64) {
+      const mimeType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+      const fileName = 'equipmentoutput.xlsx';
+      const fileUrl = 'data:' + mimeType + ';base64,' + excelBytesBase64;
+      fetch(fileUrl)
+        .then(response => response.blob())
+        .then(blob => {
+          const link = window.document.createElement('a');
+          const blobUrl = window.URL.createObjectURL(blob, { type: mimeType });
+          link.href = blobUrl;
+          link.download = fileName;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          setTimeout(() => window.URL.revokeObjectURL(blobUrl), 100);
+        });
+    } else if (type === 'pdf' && pdfBytesBase64) {
+      const mimeType = 'application/pdf';
+      const fileName = 'equipmentoutput.pdf';
+      const fileUrl = 'data:' + mimeType + ';base64,' + pdfBytesBase64;
+      fetch(fileUrl)
+        .then(response => response.blob())
+        .then(blob => {
+          const link = window.document.createElement('a');
+          const blobUrl = window.URL.createObjectURL(blob, { type: mimeType });
+          link.href = blobUrl;
+          link.download = fileName;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          setTimeout(() => window.URL.revokeObjectURL(blobUrl), 100);
+        });
+    } else if (type === 'docx' && docxBytesBase64) {
+      const mimeType = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+      const fileName = 'equipmentoutput.docx';
+      const fileUrl = 'data:' + mimeType + ';base64,' + docxBytesBase64;
+      fetch(fileUrl)
+        .then(response => response.blob())
+        .then(blob => {
+          const link = window.document.createElement('a');
+          const blobUrl = window.URL.createObjectURL(blob, { type: mimeType });
+          link.href = blobUrl;
+          link.download = fileName;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          setTimeout(() => window.URL.revokeObjectURL(blobUrl), 100);
+        });
+    }
   };
 
   const buildSmartAnalysisContext = useCallback(() => {
@@ -990,6 +1044,46 @@ const EquipmentOutput = ({ setRedirect, setRedirectUrl, t }) => {
               </Col>
               <Col xs="auto">
                 <FormGroup>
+                  <Label className={labelClasses}>
+                    {t('Export')}
+                    {t('(Optional)')}
+                  </Label>
+                  <div>
+                    <CustomInput
+                      type="checkbox"
+                      id="exportExcel"
+                      name="exportExcel"
+                      label="Excel"
+                      bsSize="sm"
+                      inline
+                      checked={exportExcel}
+                      onChange={({ target }) => setExportExcel(target.checked)}
+                    />
+                    <CustomInput
+                      type="checkbox"
+                      id="exportPdf"
+                      name="exportPdf"
+                      label="PDF"
+                      bsSize="sm"
+                      inline
+                      checked={exportPdf}
+                      onChange={({ target }) => setExportPdf(target.checked)}
+                    />
+                    <CustomInput
+                      type="checkbox"
+                      id="exportDocx"
+                      name="exportDocx"
+                      label="DOCX"
+                      bsSize="sm"
+                      inline
+                      checked={exportDocx}
+                      onChange={({ target }) => setExportDocx(target.checked)}
+                    />
+                  </div>
+                </FormGroup>
+              </Col>
+              <Col xs="auto">
+                <FormGroup>
                   <br />
                   <ButtonGroup id="submit">
                     <Button size="sm" color="success" disabled={submitButtonDisabled}>
@@ -1006,16 +1100,32 @@ const EquipmentOutput = ({ setRedirect, setRedirectUrl, t }) => {
               </Col>
               <Col xs="auto">
                 <br />
-                <ButtonIcon
-                  icon="external-link-alt"
-                  transform="shrink-3 down-2"
-                  color="falcon-default"
-                  size="sm"
-                  hidden={exportButtonHidden}
-                  onClick={handleExport}
-                >
-                  {t('Export')}
-                </ButtonIcon>
+                <UncontrolledDropdown hidden={exportButtonHidden}>
+                  <DropdownToggle
+                    size="sm"
+                    color="falcon-default"
+                    caret
+                  >
+                    {t('Export')}
+                  </DropdownToggle>
+                  <DropdownMenu right>
+                    {excelBytesBase64 ? (
+                      <DropdownItem onClick={e => handleExport(e, 'excel')}>
+                        EXCEL
+                      </DropdownItem>
+                    ) : null}
+                    {pdfBytesBase64 ? (
+                      <DropdownItem onClick={e => handleExport(e, 'pdf')}>
+                        PDF
+                      </DropdownItem>
+                    ) : null}
+                    {docxBytesBase64 ? (
+                      <DropdownItem onClick={e => handleExport(e, 'docx')}>
+                        DOCX
+                      </DropdownItem>
+                    ) : null}
+                  </DropdownMenu>
+                </UncontrolledDropdown>
               </Col>
               {settings.enableAIAnalysis ? (
                 <Col xs="auto">

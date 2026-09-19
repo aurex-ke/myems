@@ -78,6 +78,21 @@ msgstr "Тонна стандартного угля (ТВК) по энерге�
 msgid "Ton of Carbon Dioxide Emissions(TCO2E) by Energy Category"
 msgstr "Тонн выбросов углекислого газа (TCO2E) по энергетическим категориям"
 
+msgid "Energy Analysis"
+msgstr "Анализ энергопотребления"
+
+msgid "Energy Saving Analysis"
+msgstr "Анализ экономии энергии"
+
+msgid "Energy Plan Analysis"
+msgstr "Анализ энергетического плана"
+
+
+
+msgid "Space Data - Energy Category Analysis"
+msgstr "Данные пространства - Анализ категорий энергии"
+
+
 msgid "Child Spaces Data"
 msgstr "Данные о дочерних пространствах"
 
@@ -135,8 +150,14 @@ msgstr "Кумулятивная эффективность базисного �
 msgid "Reporting Period Cumulative Efficiency"
 msgstr "Кумулятивная эффективность за отчетный период"
 
+msgid "Efficiency"
+msgstr "Эффективность"
+
 msgid "Cumulative Efficiency"
 msgstr "Кумулятивная эффективность"
+
+msgid "Income"
+msgstr "Доход"
 
 msgid "Base Period Income"
 msgstr "Доход за базовый период"
@@ -192,8 +213,16 @@ msgstr "выпуск"
 msgid "Base Period Saving"
 msgstr "Экономия за базовый период"
 
+msgid "Base Period Plan"
+msgstr "План базового периода"
+
+
 msgid "Reporting Period Saving"
 msgstr "Экономия в отчетном периоде"
+
+msgid "Reporting Period Plan"
+msgstr "План отчётного периода"
+
 
 msgid "Baseline"
 msgstr "базис"
@@ -203,6 +232,10 @@ msgstr "действительный"
 
 msgid "Saving"
 msgstr "экономить"
+
+msgid "Plan"
+msgstr "План"
+
 
 msgid "Decreased"
 msgstr "убывать"
@@ -356,3 +389,178 @@ msgstr "Нерабочие дни"
 
 msgid "Working Days"
 msgstr "будний день"
+
+msgid "Carbon Emissions"
+msgstr "Выбросы углерода"
+
+msgid "Costs"
+msgstr "Затраты"
+
+msgid "Carbon"
+msgstr "Выбросы CO2"
+
+
+msgid "Energy Prediction Analysis"
+msgstr "Анализ прогнозирования энергии"
+
+msgid "Space Comparison Analysis"
+msgstr "Анализ сравнения пространств"
+
+msgid "Energy Item Analysis"
+msgstr "Анализ Энергетических Пунктов"
+
+
+msgid "Energy Consumption Analysis"
+msgstr "Анализ потребления энергии"
+
+msgid "Batch Analysis"
+msgstr "Анализ партии"
+
+msgid "Equipment Comparison"
+msgstr "Сравнение оборудования"
+
+msgid "Equipment Tracking"
+msgstr "Отслеживание оборудования"
+
+msgid "Equipment Data"
+msgstr "Данные оборудования"
+
+msgid "Energy Category Analysis"
+msgstr "Анализ категорий энергии"
+
+msgid "Meter Data"
+msgstr "Метр"
+
+msgid "Meter Energy"
+msgstr "Счетчик энергии"
+
+msgid "Meter Carbon"
+msgstr "Выбросы CO2 по приборам"
+
+msgid "Meter Cost"
+msgstr "Стоимость счетчика"
+
+msgid "Meter Trend"
+msgstr "Тренд счетчика"
+
+msgid "Meter Saving"
+msgstr "Экономия счетчиков"
+
+msgid "Meter Plan"
+msgstr "Метрический план"
+
+msgid "Meter Prediction"
+msgstr "Прогноз счетчика"
+
+msgid "Prediction"
+msgstr "Прогноз"
+
+msgid "Reporting Period Prediction"
+msgstr "Прогноз в отчетном периоде"
+
+msgid "Meter Submeters Balance"
+msgstr "Весы счетчиков Master Meter"
+
+msgid "Meter Comparison"
+msgstr "Сравнение счетчиков"
+
+msgid "Meter Tracking"
+msgstr "Слежение за счетчиком"
+
+msgid "Power Quality Data"
+msgstr "Данные о качестве электроэнергии"
+msgid "Power Quality Analysis"
+msgstr "Анализ качества электроэнергии"
+
+msgid "Point"
+msgstr "Точка"
+
+msgid "Category"
+msgstr "Категория"
+
+msgid "Type"
+msgstr "Тип"
+
+msgid "Limit"
+msgstr "Предел"
+
+msgid "Normal Limit"
+msgstr "Нормальный предел"
+
+msgid "Severe Limit"
+msgstr "Жёсткий предел"
+
+msgid "Compliance"
+msgstr "Соответствие"
+
+msgid "Worst Deviation"
+msgstr "Худшее отклонение"
+
+msgid "Worst Time"
+msgstr "Время худшего отклонения"
+
+msgid "Virtual Meter Energy"
+msgstr "Энергия виртуального счетчика"
+
+msgid "Virtual Meter Carbon"
+msgstr "Выбросы CO2 виртуальными приборами"
+
+msgid "Virtual Meter Cost"
+msgstr "Стоимость виртуального счетчика"
+
+msgid "Virtual Meter Batch Analysis"
+msgstr "Анализ партии виртуальных счетчиков"
+
+msgid "Virtual Meter Saving"
+msgstr "Экономия виртуальных счетчиков"
+
+msgid "Virtual Meter Plan"
+msgstr "План виртуального счетчика"
+
+msgid "Virtual Meter Prediction"
+msgstr "Прогноз виртуального счетчика"
+
+msgid "Virtual Meter Comparison"
+msgstr "Сравнение виртуальных счетчиков"
+
+msgid "Offline Meter Energy"
+msgstr "Автономный счетчик энергии"
+
+msgid "Offline Meter Carbon"
+msgstr "Выбросы CO2 из автономных приборов"
+
+msgid "Offline Meter Cost"
+msgstr "Стоимость автономного счетчика"
+
+msgid "Offline Meter Batch Analysis"
+msgstr "Пакетный анализ офлайн-счётчиков"
+
+msgid "Offline Meter Saving"
+msgstr "Экономия офлайн-счётчиков"
+
+msgid "Offline Meter Plan"
+msgstr "План офлайн-счётчиков"
+
+msgid "Combined Equipment"
+msgstr "Комбинированное Оборудование"
+
+msgid "Tenant"
+msgstr "Арендатор"
+
+msgid "Tenant Data"
+msgstr "Данные арендатора"
+
+msgid "Tenant Bill"
+msgstr "Счёт арендатора"
+
+msgid "Tenant Comparison"
+msgstr "Сравнение арендаторов"
+
+msgid "Store Data"
+msgstr "Данные магазина"
+
+msgid "Store Comparison"
+msgstr "Сравнение магазинов"
+
+msgid "Store"
+msgstr "Магазин"

@@ -69,6 +69,7 @@ export default {
         'Space Production': 'Analiza produkcji i zużycia energii w przestrzeniach',
         'Equipment Tracking': 'Rejestr urządzeń',
         'Equipment Comparison': 'Analiza porównawcza urządzeń',
+        'Equipment Realtime Monitor': 'Monitorowanie urządzeń w czasie rzeczywistym',
         'Shopfloor Comparison': 'Analiza porównawcza hal produkcyjnych',
         'Store Comparison': 'Analiza porównawcza sklepów',
         'Space Comparison': 'Analiza porównawcza przestrzeni',
@@ -117,6 +118,7 @@ export default {
         'Combined Equipments': 'Urządzenia zespolone',
         'Energy Storage Power Station List': 'Lista elektrowni',
         'Energy Storage Power Station Details': 'Monitorowanie urządzeń',
+        'Trend in the last hour of Main Parameter': 'Trend z ostatniej godziny głównego parametru',
         'Energy Storage Power Station Reporting': 'Raporty danych',
         'Energy Storage Power Station Alarm': 'Alarm awaryjny',
         'Energy Storage Power Station Maintenance': 'Konserwacja i utrzymanie',
@@ -564,6 +566,7 @@ export default {
         'Please wait for approval': 'Proszę czekać na zatwierdzenie',
         //notification
         Notifications: 'Powiadomienia',
+        'Notification': 'Powiadomienie',
         'Mark all as read': 'Oznacz wszystkie jako przeczytane',
         'View all': 'Zobacz wszystkie',
         'Notification New': 'Nowe',
@@ -1405,6 +1408,7 @@ export default {
         mean: 'średnia',
         std: 'odchylenie standardowe',
         p5: 'P5',
-        p95: 'P95'
+        p95: 'P95',
+        'Home': 'Strona główna'
     }
 };

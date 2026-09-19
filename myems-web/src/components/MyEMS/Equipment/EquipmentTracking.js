@@ -27,7 +27,6 @@ import { getCookieValue, createCookie, handleAPIError } from '../../../helpers/u
 import withRedirect from '../../../hoc/withRedirect';
 import { withTranslation } from 'react-i18next';
 import { toast } from 'react-toastify';
-import ButtonIcon from '../../common/ButtonIcon';
 import DeepSeekAnalysisModal from '../common/DeepSeekAnalysisModal';
 import { APIBaseURL, settings } from '../../../config';
 import AppContext from '../../../context/Context';
@@ -70,6 +69,8 @@ const EquipmentTracking = ({ setRedirect, setRedirectUrl, t }) => {
   const [spinnerHidden, setSpinnerHidden] = useState(false);
   const [exportButtonHidden, setExportButtonHidden] = useState(true);
   const [excelBytesBase64, setExcelBytesBase64] = useState(undefined);
+  const [pdfBytesBase64, setPdfBytesBase64] = useState(undefined);
+  const [docxBytesBase64, setDocxBytesBase64] = useState(undefined);
   const [smartAnalysisOpen, setSmartAnalysisOpen] = useState(false);
   const [smartAnalysisContext, setSmartAnalysisContext] = useState(null);
 
@@ -107,7 +108,8 @@ const EquipmentTracking = ({ setRedirect, setRedirectUrl, t }) => {
           let selectedSpaceID = [json[0]].map(o => o.value);
           // begin of getting equipment list
           let isSecondResponseOK = false;
-          fetch(APIBaseURL + '/reports/equipmenttracking?spaceid=' + selectedSpaceID, {
+          fetch(APIBaseURL + '/reports/equipmenttracking?spaceid=' + selectedSpaceID +
+            '&language=' + language + '&exportexcel=true&exportpdf=true&exportdocx=true', {
             method: 'GET',
             headers: {
               'Content-type': 'application/json',
@@ -152,11 +154,13 @@ const EquipmentTracking = ({ setRedirect, setRedirectUrl, t }) => {
                 setEquipmentList(equipments);
 
                 setExcelBytesBase64(json['excel_bytes_base64']);
+                setPdfBytesBase64(json['pdf_bytes_base64']);
+                setDocxBytesBase64(json['docx_bytes_base64']);
 
                 // hide spinner
                 setSpinnerHidden(true);
                 // show export button
-                setExportButtonHidden(false);
+                setExportButtonHidden(!(json['excel_bytes_base64'] || json['pdf_bytes_base64'] || json['docx_bytes_base64']));
               } else {
                 handleAPIError(json, setRedirect, setRedirectUrl, t, toast);
               }
@@ -252,7 +256,8 @@ const EquipmentTracking = ({ setRedirect, setRedirectUrl, t }) => {
     setExportButtonHidden(true);
     // begin of getting equipment list
     let isResponseOK = false;
-    fetch(APIBaseURL + '/reports/equipmenttracking?spaceid=' + selectedSpaceID + '&language=' + language, {
+    fetch(APIBaseURL + '/reports/equipmenttracking?spaceid=' + selectedSpaceID + '&language=' + language +
+      '&exportexcel=true&exportpdf=true&exportdocx=true', {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',
@@ -297,11 +302,13 @@ const EquipmentTracking = ({ setRedirect, setRedirectUrl, t }) => {
           setEquipmentList(equipments);
 
           setExcelBytesBase64(json['excel_bytes_base64']);
+          setPdfBytesBase64(json['pdf_bytes_base64']);
+          setDocxBytesBase64(json['docx_bytes_base64']);
 
           // hide spinner
           setSpinnerHidden(true);
           // show export button
-          setExportButtonHidden(false);
+          setExportButtonHidden(!(json['excel_bytes_base64'] || json['pdf_bytes_base64'] || json['docx_bytes_base64']));
         } else {
           handleAPIError(json, setRedirect, setRedirectUrl, t, toast);
         }
@@ -312,11 +319,25 @@ const EquipmentTracking = ({ setRedirect, setRedirectUrl, t }) => {
     // end of getting equipment list
   };
 
-  const handleExport = e => {
+  const handleExport = (e, type) => {
     e.preventDefault();
-    const mimeType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
-    const fileName = 'equipmenttracking.xlsx';
-    var fileUrl = 'data:' + mimeType + ';base64,' + excelBytesBase64;
+    let mimeType, fileName, base64Data;
+    if (type === 'pdf' && pdfBytesBase64) {
+      mimeType = 'application/pdf';
+      fileName = 'equipmenttracking.pdf';
+      base64Data = pdfBytesBase64;
+    } else if (type === 'docx' && docxBytesBase64) {
+      mimeType = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+      fileName = 'equipmenttracking.docx';
+      base64Data = docxBytesBase64;
+    } else if (type === 'excel' && excelBytesBase64) {
+      mimeType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+      fileName = 'equipmenttracking.xlsx';
+      base64Data = excelBytesBase64;
+    } else {
+      return;
+    }
+    var fileUrl = 'data:' + mimeType + ';base64,' + base64Data;
     fetch(fileUrl)
       .then(response => response.blob())
       .then(blob => {
@@ -326,6 +347,7 @@ const EquipmentTracking = ({ setRedirect, setRedirectUrl, t }) => {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+        window.URL.revokeObjectURL(link.href);
       });
   };
 
@@ -392,16 +414,28 @@ const EquipmentTracking = ({ setRedirect, setRedirectUrl, t }) => {
               </Col>
               <Col xs="auto">
                 <br />
-                <ButtonIcon
-                  icon="external-link-alt"
-                  transform="shrink-3 down-2"
-                  color="falcon-default"
-                  size="sm"
-                  hidden={exportButtonHidden}
-                  onClick={handleExport}
-                >
-                  {t('Export')}
-                </ButtonIcon>
+                <UncontrolledDropdown hidden={exportButtonHidden}>
+                  <DropdownToggle size="sm" color="falcon-default" caret>
+                    {t('Export')}
+                  </DropdownToggle>
+                  <DropdownMenu right>
+                    {excelBytesBase64 ? (
+                      <DropdownItem onClick={e => handleExport(e, 'excel')}>
+                        EXCEL
+                      </DropdownItem>
+                    ) : null}
+                    {pdfBytesBase64 ? (
+                      <DropdownItem onClick={e => handleExport(e, 'pdf')}>
+                        PDF
+                      </DropdownItem>
+                    ) : null}
+                    {docxBytesBase64 ? (
+                      <DropdownItem onClick={e => handleExport(e, 'docx')}>
+                        DOCX
+                      </DropdownItem>
+                    ) : null}
+                  </DropdownMenu>
+                </UncontrolledDropdown>
               </Col>
               {settings.enableAIAnalysis ? (
                 <Col xs="auto">

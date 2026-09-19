@@ -69,6 +69,7 @@ export default {
         'Space Production': 'Space Production',
         'Equipment Tracking': 'การติดตามอุปกรณ์',
         'Equipment Comparison': 'การเปรียบเทียบอุปกรณ์',
+        'Equipment Realtime Monitor': 'การตรวจสอบอุปกรณ์แบบเรียลไทม์',
         'Shopfloor Comparison': 'การเปรียบเทียบอุปกรณ์',
         'Store Comparison': 'การเปรียบเทียบอุปกรณ์',
         'Space Comparison': 'การเปรียบเทียบอุปกรณ์',
@@ -117,6 +118,7 @@ export default {
         'Combined Equipments': 'อุปกรณ์รวม',
         'Energy Storage Power Station List': 'List',
         'Energy Storage Power Station Details': 'Details',
+        'Trend in the last hour of Main Parameter': 'แนวโน้มในชั่วโมงที่ผ่านมา ของพารามิเตอร์หลัก',
         'Energy Storage Power Station Reporting': 'Reporting',
         'Energy Storage Power Station Alarm': 'Alarm',
         'Energy Storage Power Station Maintenance': 'Maintenance',
@@ -585,6 +587,7 @@ export default {
             'Please wait for approval': 'กรุณารอการอนุมัติ',
             //notification
             Notifications: 'แจ้ง เตือน',
+            'Notification': 'การแจ้งเตือน',
             'Mark all as read': 'ทําเครื่องหมายทั้งหมดว่าอ่านแล้ว',
             'View all': 'ทั้งหมด',
             'Notification New': 'ใหม่',
@@ -1425,6 +1428,7 @@ export default {
             mean: 'Ortalama',
             std: 'Std',
             p5: 'P5',
-            p95: 'P95'
+            p95: 'P95',
+            'Home': 'หน้าแรก'
         }
 };

@@ -69,6 +69,7 @@ export default {
         'Space Production': 'Space Production',
         'Equipment Tracking': 'Penjejakan Peralatan',
         'Equipment Comparison': 'Perbandingan Peralatan',
+        'Equipment Realtime Monitor': 'Pemantauan Peralatan Masa Nyata',
         'Shopfloor Comparison': 'Perbandingan Peralatan',
         'Store Comparison': 'Perbandingan Peralatan',
         'Space Comparison': 'Perbandingan Peralatan',
@@ -117,6 +118,7 @@ export default {
         'Combined Equipments': 'Peralatan Gabungan',
         'Energy Storage Power Station List': 'List',
         'Energy Storage Power Station Details': 'Details',
+        'Trend in the last hour of Main Parameter': 'Trend dalam sejam terakhir Parameter Utama',
         'Energy Storage Power Station Reporting': 'Reporting',
         'Energy Storage Power Station Alarm': 'Alarm',
         'Energy Storage Power Station Maintenance': 'Maintenance',
@@ -590,6 +592,7 @@ export default {
         'Please wait for approval': 'Sila tunggu kelulusan',
         //notification
         Notifications: 'Pemberitahuan',
+        'Notification': 'Pemberitahuan',
         'Mark all as read': 'Tandakan semua sebagai dibaca',
         'View all': 'Semua',
         'Notification New': 'BARU',
@@ -1433,6 +1436,7 @@ akaun pendaftaran tidak sah. Sila cubalah.',
         mean: 'Rata-rata',
         std: 'Simpangan baku',
         p5: 'P5',
-        p95: 'P95'
+        p95: 'P95',
+        'Home': 'Utama'
     }
 };

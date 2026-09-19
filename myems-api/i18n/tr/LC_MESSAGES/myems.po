@@ -78,6 +78,21 @@ msgstr "Enerji Kategorisine Göre Ton Standart Kömür (TCE)"
 msgid "Ton of Carbon Dioxide Emissions(TCO2E) by Energy Category"
 msgstr "Enerji Kategorisine Göre Tonlarca Karbondioksit Emisyonu (TCO2E)"
 
+msgid "Energy Analysis"
+msgstr "Enerji Analizi"
+
+msgid "Energy Saving Analysis"
+msgstr "Enerji Tasarrufu Analizi"
+
+msgid "Energy Plan Analysis"
+msgstr "Enerji Planı Analizi"
+
+
+
+msgid "Space Data - Energy Category Analysis"
+msgstr "Alan Verileri - Enerji Kategori Analizi"
+
+
 msgid "Child Spaces Data"
 msgstr "Alt Alanlar Verileri"
 
@@ -135,8 +150,14 @@ msgstr "Baz Dönem Kümülatif Verimlilik"
 msgid "Reporting Period Cumulative Efficiency"
 msgstr "Raporlama Dönemi Kümülatif Verimliliği"
 
+msgid "Efficiency"
+msgstr "Verimlilik"
+
 msgid "Cumulative Efficiency"
 msgstr "Kümülatif Verimlilik"
+
+msgid "Income"
+msgstr "Gelir"
 
 msgid "Base Period Income"
 msgstr "Baz Dönem Geliri"
@@ -192,8 +213,16 @@ msgstr "Çıktı"
 msgid "Base Period Saving"
 msgstr "Baz Dönem Tasarrufu"
 
+msgid "Base Period Plan"
+msgstr "Baz Dönem Planı"
+
+
 msgid "Reporting Period Saving"
 msgstr "Raporlama Dönemi Tasarrufu"
+
+msgid "Reporting Period Plan"
+msgstr "Raporlama Dönemi Planı"
+
 
 msgid "Baseline"
 msgstr "Taban çizgisi"
@@ -203,6 +232,10 @@ msgstr "Gerçek"
 
 msgid "Saving"
 msgstr "Tasarruf"
+
+msgid "Plan"
+msgstr "Plan"
+
 
 msgid "Decreased"
 msgstr "Azal -mış"
@@ -356,3 +389,178 @@ msgstr "Çalışma Dışı Günler"
 
 msgid "Working Days"
 msgstr "Çalışma Günleri"
+
+msgid "Carbon Emissions"
+msgstr "Karbon Emisyonları"
+
+msgid "Costs"
+msgstr "Maliyetler"
+
+msgid "Carbon"
+msgstr "CO2 Emisyonları"
+
+
+msgid "Energy Prediction Analysis"
+msgstr "Enerji Tahmin Analizi"
+
+msgid "Space Comparison Analysis"
+msgstr "Alan Karşılaştırma Analizi"
+
+msgid "Energy Item Analysis"
+msgstr "Enerji Kalemi Analizi"
+
+
+msgid "Energy Consumption Analysis"
+msgstr "Enerji Tüketim Analizi"
+
+msgid "Batch Analysis"
+msgstr "Toplu Analiz"
+
+msgid "Equipment Comparison"
+msgstr "Ekipman Karşılaştırması"
+
+msgid "Equipment Tracking"
+msgstr "Ekipman Takibi"
+
+msgid "Equipment Data"
+msgstr "Ekipman Verileri"
+
+msgid "Energy Category Analysis"
+msgstr "Enerji Kategori Analizi"
+
+msgid "Meter Data"
+msgstr "Metre"
+
+msgid "Meter Energy"
+msgstr "Sayaç Enerjisi"
+
+msgid "Meter Carbon"
+msgstr "Meter CO2 Emisyonları"
+
+msgid "Meter Cost"
+msgstr "Sayaç Maliyeti"
+
+msgid "Meter Trend"
+msgstr "Ölçüm Trendi"
+
+msgid "Meter Saving"
+msgstr "Sayaç Tasarrufu"
+
+msgid "Meter Plan"
+msgstr "Sayaç Planı"
+
+msgid "Meter Prediction"
+msgstr "Sayaç Tahmini"
+
+msgid "Prediction"
+msgstr "Tahmin"
+
+msgid "Reporting Period Prediction"
+msgstr "Raporlama Dönemi Tahmini"
+
+msgid "Meter Submeters Balance"
+msgstr "Ana Sayaç Alt Sayaç Dengesi"
+
+msgid "Meter Comparison"
+msgstr "Sayaç Karşılaştırması"
+
+msgid "Meter Tracking"
+msgstr "Sayaç Takibi"
+
+msgid "Power Quality Data"
+msgstr "Güç Kalitesi Verileri"
+msgid "Power Quality Analysis"
+msgstr "Güç Kalitesi Analizi"
+
+msgid "Point"
+msgstr "Nokta"
+
+msgid "Category"
+msgstr "Kategori"
+
+msgid "Type"
+msgstr "Tür"
+
+msgid "Limit"
+msgstr "Limit"
+
+msgid "Normal Limit"
+msgstr "Normal Limit"
+
+msgid "Severe Limit"
+msgstr "Ciddi Limit"
+
+msgid "Compliance"
+msgstr "Uygunluk"
+
+msgid "Worst Deviation"
+msgstr "En Kötü Sapma"
+
+msgid "Worst Time"
+msgstr "En Kötü Sapma Zamanı"
+
+msgid "Virtual Meter Energy"
+msgstr "Sanal Sayaç Enerjisi"
+
+msgid "Virtual Meter Carbon"
+msgstr "Sanal Meter CO2 Emisyonları"
+
+msgid "Virtual Meter Cost"
+msgstr "Sanal Sayaç Maliyeti"
+
+msgid "Virtual Meter Batch Analysis"
+msgstr "Sanal Ölçüm Toplu Analizi"
+
+msgid "Virtual Meter Saving"
+msgstr "Sanal Sayaç Tasarrufu"
+
+msgid "Virtual Meter Plan"
+msgstr "Sanal Sayaç Planı"
+
+msgid "Virtual Meter Prediction"
+msgstr "Sanal Sayaç Tahmini"
+
+msgid "Virtual Meter Comparison"
+msgstr "Sanal Sayaç Karşılaştırması"
+
+msgid "Offline Meter Energy"
+msgstr "Çevrimdışı Sayaç Enerjisi"
+
+msgid "Offline Meter Carbon"
+msgstr "Çevrimiçi Meter CO2 Emisyonları"
+
+msgid "Offline Meter Cost"
+msgstr "Çevrimdışı Ölçüm Maliyeti"
+
+msgid "Offline Meter Batch Analysis"
+msgstr "Çevrimdışı Sayaç Toplu Analizi"
+
+msgid "Offline Meter Saving"
+msgstr "Çevrimdışı Sayaç Tasarrufu"
+
+msgid "Offline Meter Plan"
+msgstr "Çevrimdışı Sayaç Planı"
+
+msgid "Combined Equipment"
+msgstr "Birleşik Ekipman"
+
+msgid "Tenant"
+msgstr "Kiracı"
+
+msgid "Tenant Data"
+msgstr "Kiracı Verileri"
+
+msgid "Tenant Bill"
+msgstr "Kiracı Faturası"
+
+msgid "Tenant Comparison"
+msgstr "Kiracı Karşılaştırması"
+
+msgid "Store Data"
+msgstr "Mağaza Verileri"
+
+msgid "Store Comparison"
+msgstr "Mağaza Karşılaştırması"
+
+msgid "Store"
+msgstr "Mağaza"

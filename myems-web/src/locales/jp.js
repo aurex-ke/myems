@@ -69,6 +69,7 @@ export default {
         'Space Production': '生産量エネルギー分析',
         'Equipment Tracking': '設備台帳',
         'Equipment Comparison': '比較分析',
+        'Equipment Realtime Monitor': '設備リアルタイム監視',
         'Shopfloor Comparison': '比較分析',
         'Store Comparison': '比較分析',
         'Space Comparison': '比較分析',
@@ -117,6 +118,7 @@ export default {
         'Combined Equipments': '複合設備',
         'Energy Storage Power Station List': '発電所リスト',
         'Energy Storage Power Station Details': '設備監視',
+        'Trend in the last hour of Main Parameter': '主パラメータの過去1時間の傾向',
         'Energy Storage Power Station Reporting': 'データレポート',
         'Energy Storage Power Station Alarm': '故障アラーム',
         'Energy Storage Power Station Maintenance': 'メンテナンス',
@@ -564,6 +566,7 @@ export default {
         'Please wait for approval': '承認をお待ちください',
         //notification
         Notifications: '通知',
+        'Notification': '通知',
         'Mark all as read': 'すべて既読にする',
         'View all': 'すべて表示',
         'Notification New': '新着',
@@ -1405,6 +1408,7 @@ export default {
         mean: '平均値',
         std: '標準偏差',
         p5: 'P5',
-        p95: 'P95'
+        p95: 'P95',
+        'Home': 'ホーム'
     }
 };
